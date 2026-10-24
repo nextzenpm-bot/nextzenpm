@@ -1,0 +1,11 @@
+import type { Metadata } from "next";
+import BecomeVendorClient from "@/components/vendor/BecomeVendorClient";
+
+export const metadata: Metadata = {
+  title: "Become a Vendor Partner",
+  description: "Join the NextZen vendor network — apply to become a vendor partner and access consistent work orders, reliable payment, and professional partnership support.",
+};
+
+export default function BecomeVendorPage() {
+  return <BecomeVendorClient />;
+}
