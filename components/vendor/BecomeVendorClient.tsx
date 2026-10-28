@@ -190,7 +190,7 @@ export default function BecomeVendorClient() {
                     <input type="tel" required value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#2e7fd4]/30 focus:border-[#2e7fd4] transition-all"
-                      placeholder="(123) 456-7890" />
+                      placeholder="(239) 310-4998" />
                   </div>
                   <div>
                     <label className="block text-xs font-semibold text-[#0f1f3d] uppercase tracking-wide mb-1.5">Company Name *</label>

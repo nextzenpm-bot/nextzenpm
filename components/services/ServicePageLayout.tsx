@@ -50,7 +50,7 @@ export default function ServicePageLayout({
             <Link href="/contact" className="btn-gold text-base py-3.5 px-7">
               Request This Service <ArrowRight size={16} />
             </Link>
-            <a href="tel:+11234567890" className="btn-secondary text-base py-3.5 px-7">
+            <a href="tel:+12393104998" className="btn-secondary text-base py-3.5 px-7">
               <Phone size={15} /> Call Us Now
             </a>
           </div>
@@ -99,10 +99,10 @@ export default function ServicePageLayout({
                   Get a Free Quote
                 </Link>
                 <a
-                  href="tel:+11234567890"
+                  href="tel:+12393104998"
                   className="mt-3 flex items-center justify-center gap-2 text-sm font-semibold text-white/80 hover:text-white transition-colors duration-200"
                 >
-                  <Phone size={13} /> (123) 456-7890
+                  <Phone size={13} /> (239) 310-4998
                 </a>
               </div>
 

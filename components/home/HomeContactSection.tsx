@@ -70,7 +70,7 @@ export default function HomeContactSection() {
               {/* Contact Cards */}
               <div className="space-y-4 mb-8">
                 <a
-                  href="tel:+11234567890"
+                  href="tel:+12393104998"
                   className="flex items-start gap-4 p-4 rounded-xl bg-white border border-slate-200 hover:border-[#2e7fd4] transition-all group shadow-sm"
                 >
                   <div className="w-10 h-10 rounded-lg bg-blue-50 text-[#1a4b8c] group-hover:bg-[#1a4b8c] group-hover:text-white flex items-center justify-center flex-shrink-0 transition-colors">
@@ -81,14 +81,14 @@ export default function HomeContactSection() {
                       National Dispatch Hotline
                     </div>
                     <div className="text-base font-bold text-[#0f1f3d] group-hover:text-[#1a4b8c]">
-                      (123) 456-7890
+                      (239) 310-4998
                     </div>
                     <div className="text-[11px] text-slate-500">24/7 Live Emergency Line</div>
                   </div>
                 </a>
 
                 <a
-                  href="mailto:info@nextzenproperty.com"
+                  href="mailto:info@nextzenpm.com"
                   className="flex items-start gap-4 p-4 rounded-xl bg-white border border-slate-200 hover:border-[#2e7fd4] transition-all group shadow-sm"
                 >
                   <div className="w-10 h-10 rounded-lg bg-blue-50 text-[#1a4b8c] group-hover:bg-[#1a4b8c] group-hover:text-white flex items-center justify-center flex-shrink-0 transition-colors">
@@ -99,7 +99,7 @@ export default function HomeContactSection() {
                       Work Orders & Inquiries
                     </div>
                     <div className="text-base font-bold text-[#0f1f3d] group-hover:text-[#1a4b8c]">
-                      info@nextzenproperty.com
+                      info@nextzenpm.com
                     </div>
                     <div className="text-[11px] text-slate-500">Fast 15-minute response SLA</div>
                   </div>
@@ -114,9 +114,9 @@ export default function HomeContactSection() {
                       Corporate Headquarters
                     </div>
                     <div className="text-sm font-bold text-[#0f1f3d]">
-                      123 Business Avenue, Suite 100
+                      5100 S CLEVELAND AVE SUITE 202
                     </div>
-                    <div className="text-[11px] text-slate-500">Orlando, FL 32801</div>
+                    <div className="text-[11px] text-slate-500">FORT MYERS, FL 33907</div>
                   </div>
                 </div>
 

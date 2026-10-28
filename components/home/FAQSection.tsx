@@ -91,11 +91,11 @@ export default function FAQSection() {
               </p>
               <div className="space-y-2.5">
                 <a
-                  href="tel:+11234567890"
+                  href="tel:+12393104998"
                   className="btn-primary w-full text-xs py-3 flex items-center justify-center gap-2"
                 >
                   <PhoneCall size={14} />
-                  Speak to Operations: (123) 456-7890
+                  Speak to Operations: (239) 310-4998
                 </a>
                 <Link
                   href="/contact"

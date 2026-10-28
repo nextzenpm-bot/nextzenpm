@@ -87,33 +87,33 @@ export default function Footer() {
             {/* Contact Details */}
             <div className="flex flex-col gap-3">
               <a
-                href="tel:+11234567890"
+                href="tel:+12393104998"
                 className="flex items-center gap-2.5 text-sm text-slate-300 hover:text-white transition-colors duration-200"
               >
                 <div className="w-7 h-7 rounded-md bg-white/5 flex items-center justify-center flex-shrink-0">
                   <Phone size={13} className="text-[#2e7fd4]" />
                 </div>
-                <span>(123) 456-7890</span>
+                <span>(239) 310-4998</span>
                 <span className="text-[10px] text-emerald-400 font-semibold bg-emerald-950 px-2 py-0.5 rounded-full border border-emerald-800">
                   24/7 Dispatch
                 </span>
               </a>
 
               <a
-                href="mailto:info@nextzenproperty.com"
+                href="mailto:info@nextzenpm.com"
                 className="flex items-center gap-2.5 text-sm text-slate-300 hover:text-white transition-colors duration-200"
               >
                 <div className="w-7 h-7 rounded-md bg-white/5 flex items-center justify-center flex-shrink-0">
                   <Mail size={13} className="text-[#2e7fd4]" />
                 </div>
-                <span>info@nextzenproperty.com</span>
+                <span>info@nextzenpm.com</span>
               </a>
 
               <div className="flex items-start gap-2.5 text-sm text-slate-300">
                 <div className="w-7 h-7 rounded-md bg-white/5 flex items-center justify-center flex-shrink-0 mt-0.5">
                   <MapPin size={13} className="text-[#2e7fd4]" />
                 </div>
-                <span>123 Business Ave, Suite 100<br />Orlando, FL 32801</span>
+                <span>5100 S CLEVELAND AVE SUITE 202<br />FORT MYERS, FL 33907</span>
               </div>
             </div>
 

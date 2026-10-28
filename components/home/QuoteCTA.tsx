@@ -89,8 +89,8 @@ export default function QuoteCTA() {
           <p className="text-sm text-slate-300 flex items-center justify-center gap-2">
             <Phone size={15} className="text-[#e8a935]" />
             <span>Need immediate emergency dispatch? Call operations now: </span>
-            <a href="tel:+11234567890" className="text-white font-bold hover:text-[#e8a935] underline decoration-[#e8a935] transition-colors">
-              (123) 456-7890
+            <a href="tel:+12393104998" className="text-white font-bold hover:text-[#e8a935] underline decoration-[#e8a935] transition-colors">
+              (239) 310-4998
             </a>
           </p>
         </div>

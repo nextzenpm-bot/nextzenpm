@@ -56,23 +56,23 @@ export default function ContactPageClient() {
                 {
                   icon: Phone,
                   title: "Phone",
-                  content: "(123) 456-7890",
+                  content: "(239) 310-4998",
                   sub: "Mon – Sat, 8AM – 6PM",
-                  href: "tel:+11234567890",
+                  href: "tel:+12393104998",
                 },
                 {
                   icon: Mail,
                   title: "Email",
-                  content: "info@nextzenproperty.com",
+                  content: "info@nextzenpm.com",
                   sub: "We respond within 24 hours",
-                  href: "mailto:info@nextzenproperty.com",
+                  href: "mailto:info@nextzenpm.com",
                 },
                 {
                   icon: MapPin,
                   title: "Office",
-                  content: "123 Business Ave, Suite 100",
-                  sub: "City, State 12345",
-                  href: "#",
+                  content: "5100 S CLEVELAND AVE SUITE 202",
+                  sub: "FORT MYERS, FL 33907",
+                  href: "https://maps.google.com/?q=5100+S+CLEVELAND+AVE+SUITE+202+FORT+MYERS+FL+33907",
                 },
                 {
                   icon: Clock,
@@ -148,7 +148,7 @@ export default function ContactPageClient() {
                           <input type="tel" value={formData.phone}
                             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                             className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-[#0f1f3d] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#2e7fd4]/30 focus:border-[#2e7fd4] transition-all"
-                            placeholder="(123) 456-7890" />
+                            placeholder="(239) 310-4998" />
                         </div>
                         <div>
                           <label className="block text-xs font-semibold text-[#0f1f3d] uppercase tracking-wide mb-1.5">Company Name</label>

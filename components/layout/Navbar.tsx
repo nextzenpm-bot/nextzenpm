@@ -280,11 +280,11 @@ export default function Navbar() {
           )}
           <div className="pt-3 border-t border-slate-100 mt-2 flex flex-col gap-2">
             <a
-              href="tel:+1234567890"
+              href="tel:+12393104998"
               className="flex items-center justify-center gap-2 py-3 px-4 rounded-xl border border-slate-200 text-sm font-semibold text-[#0f1f3d] hover:bg-slate-50 transition-colors duration-200"
             >
               <Phone size={14} />
-              (123) 456-7890
+              (239) 310-4998
             </a>
             <Link href="/become-vendor" className="btn-gold text-sm text-center py-3">
               Become a Vendor Partner
