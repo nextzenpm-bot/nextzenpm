@@ -38,7 +38,6 @@ const navLinks = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
   { name: "Our Services", href: "/services", hasDropdown: true },
-  { name: "Vendor Partnerships", href: "/vendor-partnerships" },
   { name: "Our Work", href: "/our-work" },
   { name: "Contact Us", href: "/contact" },
 ];
@@ -126,10 +125,10 @@ export default function Navbar() {
                     isActive(link.href)
                       ? isScrolled
                         ? "text-[#2e7fd4] bg-blue-50"
-                        : "text-[#2e7fd4]"
+                        : "text-white font-bold drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]"
                       : isScrolled
                       ? "text-[#334155] hover:text-[#2e7fd4] hover:bg-slate-50"
-                      : "text-white hover:text-white hover:bg-black/15 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)] font-medium"
+                      : "text-white/90 hover:text-white hover:bg-black/15 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)] font-medium"
                   }`}
                 >
                   {link.name}
@@ -187,10 +186,10 @@ export default function Navbar() {
                   isActive(link.href)
                     ? isScrolled
                       ? "text-[#2e7fd4] bg-blue-50"
-                      : "text-[#2e7fd4]"
+                      : "text-white font-bold drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]"
                     : isScrolled
                     ? "text-[#334155] hover:text-[#2e7fd4] hover:bg-slate-50"
-                    : "text-white hover:text-white hover:bg-black/15 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)] font-medium"
+                    : "text-white/90 hover:text-white hover:bg-black/15 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)] font-medium"
                 }`}
               >
                 {link.name}
