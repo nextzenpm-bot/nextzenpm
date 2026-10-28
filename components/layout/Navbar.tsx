@@ -18,6 +18,7 @@ import {
   Snowflake,
   Camera,
   MoreHorizontal,
+  ArrowRight,
 } from "lucide-react";
 
 const services = [
@@ -94,14 +95,14 @@ export default function Navbar() {
           <div className="flex flex-col leading-none">
             <span
               className={`font-bold text-lg tracking-tight transition-colors duration-300 ${
-                isScrolled ? "text-[#0f1f3d]" : "text-white"
+                isScrolled ? "text-[#0f1f3d]" : "text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
               }`}
             >
               NextZen
             </span>
             <span
               className={`text-[10px] font-medium tracking-widest uppercase transition-colors duration-300 ${
-                isScrolled ? "text-[#2e7fd4]" : "text-[#e8a935]"
+                isScrolled ? "text-[#2e7fd4]" : "text-white/90 drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]"
               }`}
             >
               Property Maintenance
@@ -128,7 +129,7 @@ export default function Navbar() {
                         : "text-[#2e7fd4]"
                       : isScrolled
                       ? "text-[#334155] hover:text-[#2e7fd4] hover:bg-slate-50"
-                      : "text-white/90 hover:text-white hover:bg-white/10"
+                      : "text-white hover:text-white hover:bg-black/15 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)] font-medium"
                   }`}
                 >
                   {link.name}
@@ -189,7 +190,7 @@ export default function Navbar() {
                       : "text-[#2e7fd4]"
                     : isScrolled
                     ? "text-[#334155] hover:text-[#2e7fd4] hover:bg-slate-50"
-                    : "text-white/90 hover:text-white hover:bg-white/10"
+                    : "text-white hover:text-white hover:bg-black/15 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)] font-medium"
                 }`}
               >
                 {link.name}
@@ -198,19 +199,18 @@ export default function Navbar() {
           )}
         </div>
 
-        {/* CTA */}
-        <div className="hidden lg:flex items-center gap-3">
-          <a
-            href="tel:+1234567890"
-            className={`flex items-center gap-2 text-sm font-semibold transition-colors duration-200 ${
-              isScrolled ? "text-[#334155] hover:text-[#2e7fd4]" : "text-white/90 hover:text-white"
+        {/* CTA matching reference */}
+        <div className="hidden lg:flex items-center gap-4">
+          <Link
+            href="/contact"
+            className={`text-sm font-bold py-2.5 px-6 rounded-full inline-flex items-center gap-2 shadow-lg transition-all duration-200 hover:scale-105 active:scale-95 ${
+              isScrolled
+                ? "bg-[#1a4b8c] text-white hover:bg-[#2e7fd4]"
+                : "bg-white text-[#0f1f3d] hover:bg-slate-100 shadow-black/20"
             }`}
           >
-            <Phone size={14} />
-            <span>(123) 456-7890</span>
-          </a>
-          <Link href="/become-vendor" className="btn-gold text-sm py-2.5 px-5">
-            Become a Vendor
+            <span>Get Started</span>
+            <ArrowRight size={14} className={isScrolled ? "text-white" : "text-[#1a4b8c]"} />
           </Link>
         </div>
 

@@ -2,155 +2,123 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Shield, Clock, Award, Phone, CheckCircle2, ShieldCheck, MapPin } from "lucide-react";
-
-const highlights = [
-  { icon: Shield, label: "Licensed & Insured ($2M)" },
-  { icon: Clock, label: "24/7 Rapid Response" },
-  { icon: Award, label: "15+ Years Industry Leader" },
-];
+import { ArrowRight } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[92vh] lg:min-h-screen flex items-center overflow-hidden bg-[#071322]">
-      {/* Background Hero Image with Positioning */}
+    <section className="relative min-h-[92vh] lg:min-h-screen flex items-center overflow-hidden">
+      {/* 1. 100% Crystal Clear, Bright Natural Background Image with ZERO Overlays or Dark Shades */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/banner.jpg"
-          alt="NextZen Property Maintenance - Premier Residential & Commercial Property Preservation"
+          alt="NextZen Property Maintenance - Estate & Commercial Property Maintenance"
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center lg:object-[62%_center] brightness-[0.88] contrast-[1.05]"
+          className="object-cover object-center select-none"
         />
-
-        {/* Sophisticated Multi-stop Gradient Overlays for Flawless Readability */}
-        {/* Left-to-right dark mask to give text 100% contrast while estate visual on right remains bright & vibrant */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#071322] via-[#071322]/95 md:via-[#071322]/85 lg:via-[#071322]/55 via-55% to-transparent pointer-events-none" />
-
-        {/* Top subtle fade for navbar seamlessness */}
-        <div className="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-[#071322]/90 to-transparent pointer-events-none" />
-
-        {/* Bottom fade into trust indicators */}
-        <div className="absolute bottom-0 inset-x-0 h-28 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent pointer-events-none" />
-
-        {/* Brand blue ambient accent */}
-        <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-[#1a4b8c]/25 rounded-full blur-3xl pointer-events-none" />
       </div>
 
-      <div className="container-wide relative z-10 pt-28 pb-20 md:py-32">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-          {/* Left Column: Text & Content (One side) */}
-          <div className="lg:col-span-7 xl:col-span-7 max-w-2xl">
-            {/* Tagline Badge */}
-            <div className="inline-flex items-center gap-2 bg-slate-900/80 border border-white/20 backdrop-blur-md text-white text-xs font-semibold px-4 py-2 rounded-full mb-6 tracking-wide uppercase shadow-lg">
-              <span className="w-2 h-2 rounded-full bg-[#e8a935] animate-pulse" />
-              <span>Full-Spectrum Property Preservation & Field Services</span>
+      <div className="container-wide relative z-10 pt-28 pb-16 md:py-36">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center min-h-[60vh]">
+          {/* Left Column: Clean, high-contrast, elegant typography exactly like reference */}
+          <div className="lg:col-span-8 max-w-2xl">
+            {/* Subtle Tag */}
+            <div className="mb-4">
+              <span
+                className="text-white text-xs sm:text-sm font-semibold tracking-wider"
+                style={{ textShadow: "0 2px 8px rgba(0,0,0,0.6), 0 1px 3px rgba(0,0,0,0.8)" }}
+              >
+                [HOA & Communities]
+              </span>
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.1rem] font-extrabold text-white leading-[1.08] tracking-tight mb-6 drop-shadow-md">
-              Trusted Property{" "}
-              <span className="text-gradient-gold">Maintenance</span>{" "}
-              & Preservation
+            <h1
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.25rem] font-bold text-white leading-[1.08] tracking-tight mb-6"
+              style={{ textShadow: "0 3px 12px rgba(0,0,0,0.6), 0 1px 4px rgba(0,0,0,0.8)" }}
+            >
+              Your property,
+              <br />
+              perfectly clean &
+              <br />
+              <span className="font-serif italic font-normal tracking-normal text-white">
+                maintained
+              </span>
             </h1>
 
-            {/* Subtext */}
-            <p className="text-base sm:text-lg md:text-xl text-slate-200/90 leading-relaxed mb-8 max-w-xl font-normal drop-shadow">
-              Reliable single-source property solutions for property managers, asset managers, and national vendor coordinators. Guaranteed SLAs, audit-ready photo documentation, and nationwide coverage.
+            {/* Subtitle */}
+            <p
+              className="text-sm sm:text-base md:text-lg text-white leading-relaxed mb-8 max-w-xl font-medium"
+              style={{ textShadow: "0 2px 10px rgba(0,0,0,0.6), 0 1px 3px rgba(0,0,0,0.8)" }}
+            >
+              Expert Janitorial & Maintenance Services, Customized to Suit Your Property&apos;s Unique Needs — Because Every Space Deserves Expert Care.
             </p>
 
-            {/* Highlight Badges */}
-            <div className="flex flex-wrap gap-2.5 sm:gap-3 mb-10">
-              {highlights.map((h) => (
-                <div
-                  key={h.label}
-                  className="flex items-center gap-2 bg-slate-900/80 border border-white/15 backdrop-blur-md rounded-xl px-3.5 py-2 shadow-sm"
-                >
-                  <h.icon size={15} className="text-[#e8a935]" />
-                  <span className="text-xs sm:text-sm font-semibold text-white">{h.label}</span>
-                </div>
-              ))}
-            </div>
-
-            {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-10">
+            {/* Get Started Button (White Pill with Dark Text & Arrow, exactly matching the reference) */}
+            <div>
               <Link
                 href="/contact"
-                className="btn-gold text-sm sm:text-base py-4 px-8 flex items-center justify-center gap-2 shadow-xl shadow-amber-900/20"
+                className="bg-white hover:bg-slate-100 text-[#0f1f3d] font-bold text-sm sm:text-base py-3.5 px-7 rounded-full inline-flex items-center gap-2.5 shadow-2xl hover:shadow-white/20 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 group"
               >
-                <span>Request a Fast Quote</span>
-                <ArrowRight size={17} />
+                <span>Get Started</span>
+                <ArrowRight size={17} className="text-[#1a4b8c] group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link
-                href="/services"
-                className="btn-secondary text-sm sm:text-base py-4 px-8 flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border-white/25 backdrop-blur-md shadow-lg"
-              >
-                <span>Explore All Services</span>
-              </Link>
-            </div>
-
-            {/* Direct Phone & Dispatch Status Bar */}
-            <div className="pt-6 border-t border-white/15 flex flex-wrap items-center gap-6 sm:gap-8">
-              <a
-                href="tel:+11234567890"
-                className="flex items-center gap-3 group"
-              >
-                <div className="w-11 h-11 rounded-xl bg-[#2e7fd4] flex items-center justify-center group-hover:bg-[#e8a935] transition-colors duration-300 shadow-md">
-                  <Phone size={18} className="text-white" />
-                </div>
-                <div>
-                  <p className="text-[11px] text-blue-200/80 uppercase tracking-widest font-semibold">24/7 Dispatch Desk</p>
-                  <p className="text-white font-bold text-lg leading-tight group-hover:text-[#e8a935] transition-colors">
-                    (123) 456-7890
-                  </p>
-                </div>
-              </a>
-
-              <div className="hidden sm:block w-px h-10 bg-white/20" />
-
-              <div>
-                <p className="text-[11px] text-blue-200/80 uppercase tracking-widest font-semibold">Dispatch Response</p>
-                <p className="text-emerald-400 font-semibold text-sm flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                  Live Crews on Standby
-                </p>
-              </div>
             </div>
           </div>
 
-          {/* Right Column: Floating Visual Badges Highlighting Technician */}
-          <div className="lg:col-span-5 xl:col-span-5 hidden lg:flex flex-col items-end justify-end h-full relative">
-            {/* Floating Glassmorphism Badge 1: Top Right */}
-            <div className="bg-slate-900/80 border border-white/20 backdrop-blur-md rounded-2xl p-4 shadow-2xl max-w-xs mb-8 transition-transform hover:scale-105 duration-200">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-400 flex-shrink-0">
-                  <ShieldCheck size={22} />
-                </div>
-                <div>
-                  <div className="text-xs font-bold text-white leading-tight">
-                    Certified Field Technicians
-                  </div>
-                  <div className="text-[11px] text-slate-300 mt-0.5">
-                    Equipped, Vetted & Background Checked
-                  </div>
-                </div>
+          {/* Right / Bottom Area: Floating Glassmorphism "500+ Projects Completed" Card */}
+          <div className="lg:col-span-4 flex justify-start lg:justify-end items-end h-full mt-6 lg:mt-0">
+            <div className="bg-slate-900/40 hover:bg-slate-900/50 backdrop-blur-md border border-white/25 rounded-2xl p-4 sm:p-5 shadow-2xl text-white max-w-[260px] transition-all duration-300 hover:scale-105">
+              <div className="text-2xl sm:text-3xl font-extrabold text-white leading-none mb-1">
+                500+
               </div>
-            </div>
+              <div className="text-xs sm:text-sm font-medium text-white/90 mb-3.5">
+                Projects Completed
+              </div>
 
-            {/* Floating Glassmorphism Badge 2: Lower Right */}
-            <div className="bg-slate-900/80 border border-white/20 backdrop-blur-md rounded-2xl p-4 shadow-2xl max-w-xs transition-transform hover:scale-105 duration-200">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-[#e8a935]/20 border border-[#e8a935]/30 flex items-center justify-center text-[#e8a935] flex-shrink-0">
-                  <CheckCircle2 size={22} />
+              {/* Overlapping Avatars Stack with "+493 more" */}
+              <div className="flex items-center -space-x-2">
+                {/* Avatar 1 */}
+                <div className="w-8 h-8 rounded-full border-2 border-white overflow-hidden bg-slate-300 relative shadow-sm">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&h=80&auto=format&fit=crop&crop=faces&q=80"
+                    alt="Client"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <div>
-                  <div className="text-xs font-bold text-white leading-tight">
-                    100% Photo Verified Work
-                  </div>
-                  <div className="text-[11px] text-slate-300 mt-0.5">
-                    Before, During & After GPS Stamped
-                  </div>
+                {/* Avatar 2 */}
+                <div className="w-8 h-8 rounded-full border-2 border-white overflow-hidden bg-slate-300 relative shadow-sm">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&auto=format&fit=crop&crop=faces&q=80"
+                    alt="Client"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                {/* Avatar 3 */}
+                <div className="w-8 h-8 rounded-full border-2 border-white overflow-hidden bg-slate-300 relative shadow-sm">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&auto=format&fit=crop&crop=faces&q=80"
+                    alt="Client"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                {/* Avatar 4 */}
+                <div className="w-8 h-8 rounded-full border-2 border-white overflow-hidden bg-slate-300 relative shadow-sm">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&auto=format&fit=crop&crop=faces&q=80"
+                    alt="Client"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                {/* 493 more circle */}
+                <div className="w-8 h-8 rounded-full border-2 border-white bg-slate-900/80 backdrop-blur-md text-[10px] font-bold text-white flex flex-col items-center justify-center shadow-sm leading-none">
+                  <span>493</span>
+                  <span className="text-[8px] text-slate-300">more</span>
                 </div>
               </div>
             </div>
