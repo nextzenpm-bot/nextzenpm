@@ -16,17 +16,17 @@ export default function HeroSection() {
       {/* Background Hero Image with Positioning */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/property-maintenance.jpg"
-          alt="NextZen Property Maintenance - Professional Field Technician"
+          src="/images/banner.jpg"
+          alt="NextZen Property Maintenance - Premier Residential & Commercial Property Preservation"
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[78%_center] md:object-[82%_center] lg:object-[85%_center] brightness-[0.92] contrast-[1.05]"
+          className="object-cover object-center lg:object-[62%_center] brightness-[0.88] contrast-[1.05]"
         />
 
         {/* Sophisticated Multi-stop Gradient Overlays for Flawless Readability */}
-        {/* Left-to-right dark mask to give text 100% contrast while technician on right stays bright & clear */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#071322] via-[#071322]/95 md:via-[#071322]/85 lg:via-[#071322]/70 via-55% to-transparent pointer-events-none" />
+        {/* Left-to-right dark mask to give text 100% contrast while estate visual on right remains bright & vibrant */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#071322] via-[#071322]/95 md:via-[#071322]/85 lg:via-[#071322]/55 via-55% to-transparent pointer-events-none" />
 
         {/* Top subtle fade for navbar seamlessness */}
         <div className="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-[#071322]/90 to-transparent pointer-events-none" />
