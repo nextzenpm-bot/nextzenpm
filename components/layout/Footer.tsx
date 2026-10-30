@@ -70,15 +70,13 @@ export default function Footer() {
           {/* Brand & Contact (4 cols) */}
           <div className="lg:col-span-4">
             <Link href="/" className="inline-block mb-5 group">
-              <div className="bg-white/95 rounded-xl px-3.5 py-2 shadow-lg border border-white/20 inline-flex items-center transition-transform group-hover:scale-105">
-                <Image
-                  src="/images/logo.png"
-                  alt="NextZen Property Maintenance LLC"
-                  width={160}
-                  height={50}
-                  className="h-10 w-auto object-contain"
-                />
-              </div>
+              <Image
+                src="/images/logo.png"
+                alt="NextZen Property Maintenance LLC"
+                width={200}
+                height={65}
+                className="h-12 sm:h-14 w-auto object-contain transition-transform group-hover:scale-105"
+              />
             </Link>
 
             <p className="text-slate-400 text-sm leading-relaxed mb-6">

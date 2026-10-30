@@ -89,22 +89,14 @@ export default function Navbar() {
       <nav className="container-wide flex items-center justify-between h-20">
         {/* Official Brand Logo */}
         <Link href="/" className="flex items-center group py-1">
-          <div
-            className={`transition-all duration-300 rounded-xl px-2.5 py-1 ${
-              isScrolled
-                ? ""
-                : "bg-white/95 backdrop-blur-md shadow-md border border-white/40"
-            }`}
-          >
-            <Image
-              src="/images/logo.png"
-              alt="NextZen Property Maintenance LLC"
-              width={180}
-              height={55}
-              priority
-              className="h-9 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-            />
-          </div>
+          <Image
+            src="/images/logo.png"
+            alt="NextZen Property Maintenance LLC"
+            width={240}
+            height={75}
+            priority
+            className="h-12 sm:h-14 md:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105 drop-shadow-md"
+          />
         </Link>
 
         {/* Desktop Nav */}
