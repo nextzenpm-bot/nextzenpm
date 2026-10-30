@@ -31,10 +31,10 @@ export default function TestimonialsSection() {
       <div className="container-wide">
         {/* Header */}
         <div className="text-center mb-14">
-          <div className="inline-flex items-center gap-2 text-[#2e7fd4] text-xs font-bold uppercase tracking-widest mb-4">
-            <span className="w-6 h-px bg-[#2e7fd4]" />
+          <div className="inline-flex items-center gap-2 text-[#44DDF1] text-xs font-bold uppercase tracking-widest mb-4">
+            <span className="w-6 h-px bg-[#44DDF1]" />
             Client Feedback
-            <span className="w-6 h-px bg-[#2e7fd4]" />
+            <span className="w-6 h-px bg-[#44DDF1]" />
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-[#0f1f3d] mb-4">
             Trusted by Industry Professionals
@@ -67,7 +67,7 @@ export default function TestimonialsSection() {
 
               {/* Author */}
               <div className="flex items-center gap-3 pt-4 border-t border-slate-100">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#2e7fd4] to-[#0f1f3d] flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#44DDF1] to-[#0f1f3d] flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
                   {t.initials}
                 </div>
                 <div>

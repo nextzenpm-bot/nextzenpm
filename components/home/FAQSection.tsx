@@ -118,7 +118,7 @@ export default function FAQSection() {
                   key={index}
                   className={`border rounded-2xl transition-all duration-200 overflow-hidden ${
                     isOpen
-                      ? "border-[#2e7fd4] bg-slate-50/50 shadow-sm"
+                      ? "border-[#44DDF1] bg-slate-50/50 shadow-sm"
                       : "border-slate-200 bg-white hover:border-slate-300"
                   }`}
                 >

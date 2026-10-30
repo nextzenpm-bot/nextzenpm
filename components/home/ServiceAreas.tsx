@@ -55,7 +55,7 @@ export default function ServiceAreas() {
   return (
     <section className="py-20 bg-slate-900 text-white relative overflow-hidden border-t border-slate-800">
       {/* Glow elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[#2e7fd4]/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#44DDF1]/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#e8a935]/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container-wide relative z-10">
@@ -66,7 +66,7 @@ export default function ServiceAreas() {
             Geographic Coverage
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4">
-            Extensive <span className="text-[#2e7fd4]">Regional & Nationwide</span> Reach
+            Extensive <span className="text-[#44DDF1]">Regional & Nationwide</span> Reach
           </h2>
           <p className="text-base md:text-lg text-slate-300 leading-relaxed">
             From tier-1 primary metros to tertiary suburban counties, our vetted vendor network delivers boots-on-the-ground responsiveness wherever your assets are located.
@@ -80,7 +80,7 @@ export default function ServiceAreas() {
             <div className="text-xs uppercase tracking-wider text-slate-300 font-semibold">States Covered</div>
           </div>
           <div className="bg-slate-800/60 border border-slate-700/60 rounded-xl p-5 text-center">
-            <div className="text-3xl lg:text-4xl font-black text-[#2e7fd4] mb-1">500+</div>
+            <div className="text-3xl lg:text-4xl font-black text-[#44DDF1] mb-1">500+</div>
             <div className="text-xs uppercase tracking-wider text-slate-300 font-semibold">Certified Field Technicians</div>
           </div>
           <div className="bg-slate-800/60 border border-slate-700/60 rounded-xl p-5 text-center">
@@ -98,11 +98,11 @@ export default function ServiceAreas() {
           {regionalHubs.map((hub, idx) => (
             <div
               key={idx}
-              className="bg-slate-800/40 hover:bg-slate-800/70 border border-slate-700/70 hover:border-[#2e7fd4]/50 rounded-2xl p-6 transition-all duration-300"
+              className="bg-slate-800/40 hover:bg-slate-800/70 border border-slate-700/70 hover:border-[#44DDF1]/50 rounded-2xl p-6 transition-all duration-300"
             >
               <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
                 <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded-lg bg-[#2e7fd4]/20 border border-[#2e7fd4]/30 flex items-center justify-center text-[#2e7fd4]">
+                  <div className="w-8 h-8 rounded-lg bg-[#44DDF1]/20 border border-[#44DDF1]/30 flex items-center justify-center text-[#44DDF1]">
                     <Navigation size={16} />
                   </div>
                   <h3 className="text-lg font-bold text-white">{hub.region}</h3>
@@ -137,7 +137,7 @@ export default function ServiceAreas() {
 
               <div className="pt-3 border-t border-slate-700/50 flex items-center justify-between text-xs text-slate-400">
                 <span className="flex items-center gap-1.5 text-blue-200">
-                  <Clock size={13} className="text-[#2e7fd4]" />
+                  <Clock size={13} className="text-[#44DDF1]" />
                   {hub.dispatchTime}
                 </span>
                 <span className="flex items-center gap-1.5 text-emerald-400">
@@ -164,7 +164,7 @@ export default function ServiceAreas() {
                 value={zipInput}
                 onChange={(e) => setZipInput(e.target.value)}
                 maxLength={5}
-                className="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#2e7fd4]"
+                className="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#44DDF1]"
               />
             </div>
             <button type="submit" className="btn-gold text-sm py-3 px-6 whitespace-nowrap flex items-center justify-center gap-2">

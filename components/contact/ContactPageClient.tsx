@@ -85,13 +85,13 @@ export default function ContactPageClient() {
                 <a
                   key={item.title}
                   href={item.href}
-                  className="bg-white rounded-2xl p-5 border border-slate-100 shadow-sm flex items-start gap-4 hover:shadow-md hover:border-[#2e7fd4]/30 transition-all duration-300 group"
+                  className="bg-white rounded-2xl p-5 border border-slate-100 shadow-sm flex items-start gap-4 hover:shadow-md hover:border-[#44DDF1]/30 transition-all duration-300 group"
                 >
-                  <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#2e7fd4]/10 to-[#1a4b8c]/10 flex items-center justify-center flex-shrink-0 group-hover:from-[#2e7fd4]/20 group-hover:to-[#1a4b8c]/20 transition-all duration-300">
-                    <item.icon size={18} className="text-[#2e7fd4]" />
+                  <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#44DDF1]/10 to-[#1a4b8c]/10 flex items-center justify-center flex-shrink-0 group-hover:from-[#44DDF1]/20 group-hover:to-[#1a4b8c]/20 transition-all duration-300">
+                    <item.icon size={18} className="text-[#44DDF1]" />
                   </div>
                   <div>
-                    <p className="text-xs font-bold text-[#2e7fd4] uppercase tracking-widest mb-0.5">{item.title}</p>
+                    <p className="text-xs font-bold text-[#44DDF1] uppercase tracking-widest mb-0.5">{item.title}</p>
                     <p className="font-semibold text-[#0f1f3d] text-sm">{item.content}</p>
                     <p className="text-xs text-slate-500 mt-0.5">{item.sub}</p>
                   </div>
@@ -130,14 +130,14 @@ export default function ContactPageClient() {
                           <label className="block text-xs font-semibold text-[#0f1f3d] uppercase tracking-wide mb-1.5">Full Name *</label>
                           <input type="text" required value={formData.name}
                             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                            className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-[#0f1f3d] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#2e7fd4]/30 focus:border-[#2e7fd4] transition-all"
+                            className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-[#0f1f3d] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#44DDF1]/30 focus:border-[#44DDF1] transition-all"
                             placeholder="John Smith" />
                         </div>
                         <div>
                           <label className="block text-xs font-semibold text-[#0f1f3d] uppercase tracking-wide mb-1.5">Email Address *</label>
                           <input type="email" required value={formData.email}
                             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                            className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-[#0f1f3d] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#2e7fd4]/30 focus:border-[#2e7fd4] transition-all"
+                            className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-[#0f1f3d] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#44DDF1]/30 focus:border-[#44DDF1] transition-all"
                             placeholder="john@company.com" />
                         </div>
                       </div>
@@ -147,14 +147,14 @@ export default function ContactPageClient() {
                           <label className="block text-xs font-semibold text-[#0f1f3d] uppercase tracking-wide mb-1.5">Phone Number</label>
                           <input type="tel" value={formData.phone}
                             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                            className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-[#0f1f3d] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#2e7fd4]/30 focus:border-[#2e7fd4] transition-all"
+                            className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-[#0f1f3d] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#44DDF1]/30 focus:border-[#44DDF1] transition-all"
                             placeholder="(239) 310-4998" />
                         </div>
                         <div>
                           <label className="block text-xs font-semibold text-[#0f1f3d] uppercase tracking-wide mb-1.5">Company Name</label>
                           <input type="text" value={formData.company}
                             onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                            className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-[#0f1f3d] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#2e7fd4]/30 focus:border-[#2e7fd4] transition-all"
+                            className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-[#0f1f3d] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#44DDF1]/30 focus:border-[#44DDF1] transition-all"
                             placeholder="Your Company" />
                         </div>
                       </div>
@@ -163,7 +163,7 @@ export default function ContactPageClient() {
                         <label className="block text-xs font-semibold text-[#0f1f3d] uppercase tracking-wide mb-1.5">Inquiry Type *</label>
                         <select required value={formData.inquiryType}
                           onChange={(e) => setFormData({ ...formData, inquiryType: e.target.value })}
-                          className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-[#0f1f3d] focus:outline-none focus:ring-2 focus:ring-[#2e7fd4]/30 focus:border-[#2e7fd4] transition-all bg-white">
+                          className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-[#0f1f3d] focus:outline-none focus:ring-2 focus:ring-[#44DDF1]/30 focus:border-[#44DDF1] transition-all bg-white">
                           <option value="">Select inquiry type</option>
                           {inquiryTypes.map((t) => <option key={t} value={t}>{t}</option>)}
                         </select>
@@ -173,7 +173,7 @@ export default function ContactPageClient() {
                         <label className="block text-xs font-semibold text-[#0f1f3d] uppercase tracking-wide mb-1.5">Message *</label>
                         <textarea required rows={5} value={formData.message}
                           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                          className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-[#0f1f3d] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#2e7fd4]/30 focus:border-[#2e7fd4] transition-all resize-none"
+                          className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-[#0f1f3d] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#44DDF1]/30 focus:border-[#44DDF1] transition-all resize-none"
                           placeholder="Please describe your needs, property type, location, and any other relevant details..." />
                       </div>
 

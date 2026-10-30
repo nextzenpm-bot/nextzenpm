@@ -59,9 +59,9 @@ export default function StatsSection() {
           {keyStats.map((stat, i) => (
             <div
               key={i}
-              className="bg-[#162847]/80 hover:bg-[#1a4b8c]/30 border border-white/10 hover:border-[#2e7fd4]/50 rounded-2xl p-5 text-center flex flex-col items-center justify-between transition-all duration-300 group"
+              className="bg-[#162847]/80 hover:bg-[#1a4b8c]/30 border border-white/10 hover:border-[#44DDF1]/50 rounded-2xl p-5 text-center flex flex-col items-center justify-between transition-all duration-300 group"
             >
-              <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 text-[#2e7fd4] group-hover:text-[#e8a935] flex items-center justify-center mb-3 transition-colors">
+              <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 text-[#44DDF1] group-hover:text-[#e8a935] flex items-center justify-center mb-3 transition-colors">
                 <stat.icon size={18} />
               </div>
               <div>

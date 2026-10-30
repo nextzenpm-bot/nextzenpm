@@ -5,7 +5,7 @@ export default function QuoteCTA() {
   return (
     <section className="py-20 bg-gradient-to-br from-[#0b1829] via-[#0f1f3d] to-[#162847] text-white relative overflow-hidden border-t border-slate-800">
       {/* Background visual accents */}
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#2e7fd4]/15 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#44DDF1]/15 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-[#e8a935]/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container-wide relative z-10">
@@ -28,13 +28,13 @@ export default function QuoteCTA() {
         {/* Dual Conversion Blocks */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
           {/* Box 1: Property / Asset Managers */}
-          <div className="bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 hover:border-[#2e7fd4] rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 shadow-xl group">
+          <div className="bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 hover:border-[#44DDF1] rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 shadow-xl group">
             <div>
               <div className="flex items-center justify-between mb-4">
-                <span className="text-xs font-bold uppercase tracking-wider text-[#2e7fd4] bg-blue-950/80 border border-blue-800 px-3 py-1 rounded-full">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#44DDF1] bg-blue-950/80 border border-blue-800 px-3 py-1 rounded-full">
                   For Property & Asset Managers
                 </span>
-                <ShieldCheck size={20} className="text-[#2e7fd4]" />
+                <ShieldCheck size={20} className="text-[#44DDF1]" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-2">
                 Request a Service Quote

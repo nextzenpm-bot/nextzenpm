@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import {
   Menu,
@@ -86,26 +87,23 @@ export default function Navbar() {
       }`}
     >
       <nav className="container-wide flex items-center justify-between h-20">
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-2.5 group">
-          <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-[#2e7fd4] to-[#0f1f3d] flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
-            <Building2 size={18} className="text-white" />
-          </div>
-          <div className="flex flex-col leading-none">
-            <span
-              className={`font-bold text-lg tracking-tight transition-colors duration-300 ${
-                isScrolled ? "text-[#0f1f3d]" : "text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
-              }`}
-            >
-              NextZen
-            </span>
-            <span
-              className={`text-[10px] font-medium tracking-widest uppercase transition-colors duration-300 ${
-                isScrolled ? "text-[#2e7fd4]" : "text-white/90 drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]"
-              }`}
-            >
-              Property Maintenance
-            </span>
+        {/* Official Brand Logo */}
+        <Link href="/" className="flex items-center group py-1">
+          <div
+            className={`transition-all duration-300 rounded-xl px-2.5 py-1 ${
+              isScrolled
+                ? ""
+                : "bg-white/95 backdrop-blur-md shadow-md border border-white/40"
+            }`}
+          >
+            <Image
+              src="/images/logo.png"
+              alt="NextZen Property Maintenance LLC"
+              width={180}
+              height={55}
+              priority
+              className="h-9 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            />
           </div>
         </Link>
 
@@ -124,11 +122,11 @@ export default function Navbar() {
                   className={`flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${
                     isActive(link.href)
                       ? isScrolled
-                        ? "text-[#2e7fd4] bg-blue-50"
-                        : "text-white font-bold drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]"
+                        ? "text-[#0891b2] bg-cyan-50"
+                        : "text-[#44DDF1] font-bold drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]"
                       : isScrolled
-                      ? "text-[#334155] hover:text-[#2e7fd4] hover:bg-slate-50"
-                      : "text-white/90 hover:text-white hover:bg-black/15 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)] font-medium"
+                      ? "text-[#334155] hover:text-[#0891b2] hover:bg-slate-50"
+                      : "text-white/90 hover:text-[#44DDF1] hover:bg-black/15 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)] font-medium"
                   }`}
                 >
                   {link.name}
@@ -153,11 +151,11 @@ export default function Navbar() {
                         href={service.href}
                         className="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-all duration-200 group/item"
                       >
-                        <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-blue-500/10 to-blue-700/10 flex items-center justify-center flex-shrink-0 group-hover/item:from-blue-500/20 group-hover/item:to-blue-700/20 transition-all duration-200">
-                          <service.icon size={16} className="text-[#2e7fd4]" />
+                        <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-[#44DDF1]/20 to-[#1a4b8c]/20 flex items-center justify-center flex-shrink-0 group-hover/item:from-[#44DDF1]/30 group-hover/item:to-[#1a4b8c]/30 transition-all duration-200">
+                          <service.icon size={16} className="text-[#0891b2]" />
                         </div>
                         <div>
-                          <p className="text-sm font-semibold text-[#0f1f3d] group-hover/item:text-[#2e7fd4] transition-colors duration-200 leading-tight">
+                          <p className="text-sm font-semibold text-[#0f1f3d] group-hover/item:text-[#0891b2] transition-colors duration-200 leading-tight">
                             {service.name}
                           </p>
                           <p className="text-xs text-slate-500 mt-0.5 leading-tight">{service.desc}</p>
@@ -167,7 +165,7 @@ export default function Navbar() {
                     <div className="col-span-2 mt-1 pt-3 border-t border-slate-100 flex items-center justify-between">
                       <Link
                         href="/services"
-                        className="text-sm font-semibold text-[#2e7fd4] hover:text-[#1a4b8c] transition-colors duration-200 flex items-center gap-1"
+                        className="text-sm font-semibold text-[#0891b2] hover:text-[#0e7490] transition-colors duration-200 flex items-center gap-1"
                       >
                         View All Services →
                       </Link>
@@ -185,11 +183,11 @@ export default function Navbar() {
                 className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${
                   isActive(link.href)
                     ? isScrolled
-                      ? "text-[#2e7fd4] bg-blue-50"
-                      : "text-white font-bold drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]"
+                      ? "text-[#0891b2] bg-cyan-50"
+                      : "text-[#44DDF1] font-bold drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]"
                     : isScrolled
-                    ? "text-[#334155] hover:text-[#2e7fd4] hover:bg-slate-50"
-                    : "text-white/90 hover:text-white hover:bg-black/15 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)] font-medium"
+                    ? "text-[#334155] hover:text-[#0891b2] hover:bg-slate-50"
+                    : "text-white/90 hover:text-[#44DDF1] hover:bg-black/15 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)] font-medium"
                 }`}
               >
                 {link.name}
@@ -204,12 +202,12 @@ export default function Navbar() {
             href="/contact"
             className={`text-sm font-bold py-2.5 px-6 rounded-full inline-flex items-center gap-2 shadow-lg transition-all duration-200 hover:scale-105 active:scale-95 ${
               isScrolled
-                ? "bg-[#1a4b8c] text-white hover:bg-[#2e7fd4]"
+                ? "bg-[#1a4b8c] text-white hover:bg-[#0891b2]"
                 : "bg-white text-[#0f1f3d] hover:bg-slate-100 shadow-black/20"
             }`}
           >
             <span>Get Started</span>
-            <ArrowRight size={14} className={isScrolled ? "text-white" : "text-[#1a4b8c]"} />
+            <ArrowRight size={14} className={isScrolled ? "text-white" : "text-[#0891b2]"} />
           </Link>
         </div>
 
@@ -255,9 +253,9 @@ export default function Navbar() {
                       <Link
                         key={service.href}
                         href={service.href}
-                        className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-slate-600 hover:text-[#2e7fd4] hover:bg-blue-50 transition-all duration-200"
+                        className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-slate-600 hover:text-[#0891b2] hover:bg-cyan-50 transition-all duration-200"
                       >
-                        <service.icon size={15} className="text-[#2e7fd4]" />
+                        <service.icon size={15} className="text-[#0891b2]" />
                         {service.name}
                       </Link>
                     ))}
@@ -270,7 +268,7 @@ export default function Navbar() {
                 href={link.href}
                 className={`px-4 py-3 rounded-xl text-sm font-semibold transition-colors duration-200 ${
                   isActive(link.href)
-                    ? "text-[#2e7fd4] bg-blue-50"
+                    ? "text-[#0891b2] bg-cyan-50"
                     : "text-[#0f1f3d] hover:bg-slate-50"
                 }`}
               >

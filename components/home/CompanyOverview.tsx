@@ -47,8 +47,8 @@ export default function CompanyOverview() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Narrative & Pillars */}
           <div className="lg:col-span-7">
-            <div className="inline-flex items-center gap-2 bg-[#2e7fd4]/10 text-[#1a4b8c] text-xs font-bold px-3.5 py-1.5 rounded-full mb-4 uppercase tracking-wider">
-              <span className="w-2 h-2 rounded-full bg-[#2e7fd4]" />
+            <div className="inline-flex items-center gap-2 bg-[#44DDF1]/10 text-[#1a4b8c] text-xs font-bold px-3.5 py-1.5 rounded-full mb-4 uppercase tracking-wider">
+              <span className="w-2 h-2 rounded-full bg-[#44DDF1]" />
               About NextZen Property Maintenance
             </div>
 
@@ -69,7 +69,7 @@ export default function CompanyOverview() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
               {highlights.map((item, idx) => (
                 <div key={idx} className="flex items-start gap-2.5">
-                  <CheckCircle2 size={18} className="text-[#2e7fd4] flex-shrink-0 mt-0.5" />
+                  <CheckCircle2 size={18} className="text-[#44DDF1] flex-shrink-0 mt-0.5" />
                   <span className="text-xs md:text-sm text-slate-700 font-medium leading-snug">
                     {item}
                   </span>
@@ -94,7 +94,7 @@ export default function CompanyOverview() {
               {keyPillars.map((pillar, i) => (
                 <div
                   key={i}
-                  className="bg-slate-50 hover:bg-white border border-slate-200/90 hover:border-[#2e7fd4]/40 hover:shadow-lg transition-all duration-300 rounded-2xl p-5 group"
+                  className="bg-slate-50 hover:bg-white border border-slate-200/90 hover:border-[#44DDF1]/40 hover:shadow-lg transition-all duration-300 rounded-2xl p-5 group"
                 >
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-xl bg-[#1a4b8c]/5 group-hover:bg-[#1a4b8c] text-[#1a4b8c] group-hover:text-white flex items-center justify-center flex-shrink-0 transition-colors duration-200 shadow-sm">

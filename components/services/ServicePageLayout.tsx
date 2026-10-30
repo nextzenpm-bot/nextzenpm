@@ -62,8 +62,8 @@ export default function ServicePageLayout({
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
-              <div className="inline-flex items-center gap-2 text-[#2e7fd4] text-xs font-bold uppercase tracking-widest mb-4">
-                <span className="w-6 h-px bg-[#2e7fd4]" />
+              <div className="inline-flex items-center gap-2 text-[#44DDF1] text-xs font-bold uppercase tracking-widest mb-4">
+                <span className="w-6 h-px bg-[#44DDF1]" />
                 Service Overview
               </div>
               <h2 className="text-3xl font-bold text-[#0f1f3d] mb-5">What We Provide</h2>
@@ -79,7 +79,7 @@ export default function ServicePageLayout({
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {features.map((feature) => (
                     <div key={feature} className="flex items-center gap-2.5">
-                      <CheckCircle size={16} className="text-[#2e7fd4] flex-shrink-0" />
+                      <CheckCircle size={16} className="text-[#44DDF1] flex-shrink-0" />
                       <span className="text-slate-700 text-sm font-medium">{feature}</span>
                     </div>
                   ))}
@@ -114,9 +114,9 @@ export default function ServicePageLayout({
                     <Link
                       key={s.href}
                       href={s.href}
-                      className="flex items-center gap-2 text-sm text-slate-600 hover:text-[#2e7fd4] font-medium transition-colors duration-200 py-1"
+                      className="flex items-center gap-2 text-sm text-slate-600 hover:text-[#44DDF1] font-medium transition-colors duration-200 py-1"
                     >
-                      <ArrowRight size={13} className="text-[#2e7fd4]" />
+                      <ArrowRight size={13} className="text-[#44DDF1]" />
                       {s.name}
                     </Link>
                   ))}
@@ -138,7 +138,7 @@ export default function ServicePageLayout({
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {benefits.map((b) => (
                 <div key={b.title} className="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
-                  <div className="w-2 h-8 rounded-full bg-gradient-to-b from-[#2e7fd4] to-[#0f1f3d] mb-4" />
+                  <div className="w-2 h-8 rounded-full bg-gradient-to-b from-[#44DDF1] to-[#0f1f3d] mb-4" />
                   <h3 className="font-bold text-[#0f1f3d] mb-2">{b.title}</h3>
                   <p className="text-slate-500 text-sm leading-relaxed">{b.desc}</p>
                 </div>
@@ -149,7 +149,7 @@ export default function ServicePageLayout({
       )}
 
       {/* CTA Banner */}
-      <section className="py-16 bg-gradient-to-r from-[#1a4b8c] to-[#2e7fd4]">
+      <section className="py-16 bg-gradient-to-r from-[#1a4b8c] to-[#44DDF1]">
         <div className="container-wide flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <h2 className="text-2xl md:text-3xl font-bold text-white">

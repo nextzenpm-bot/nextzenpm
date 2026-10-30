@@ -92,7 +92,7 @@ export default function WhoWeServe() {
           {clientSegments.map((segment, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm hover:shadow-xl hover:border-[#2e7fd4]/40 transition-all duration-300 flex flex-col justify-between group"
+              className="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm hover:shadow-xl hover:border-[#44DDF1]/40 transition-all duration-300 flex flex-col justify-between group"
             >
               <div>
                 <div className="flex items-center justify-between gap-4 mb-6">
@@ -133,7 +133,7 @@ export default function WhoWeServe() {
               <div className="pt-6 border-t border-slate-100">
                 <Link
                   href={segment.ctaLink}
-                  className="inline-flex items-center gap-2 text-sm font-bold text-[#1a4b8c] hover:text-[#2e7fd4] group-hover:translate-x-1 transition-all"
+                  className="inline-flex items-center gap-2 text-sm font-bold text-[#1a4b8c] hover:text-[#44DDF1] group-hover:translate-x-1 transition-all"
                 >
                   <span>{segment.ctaText}</span>
                   <ArrowRight size={15} />

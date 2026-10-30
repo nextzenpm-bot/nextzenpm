@@ -121,7 +121,7 @@ export default function ServicesPage() {
               <Link
                 key={service.href}
                 href={service.href}
-                className="group bg-white rounded-2xl p-7 border border-slate-100 hover:border-[#2e7fd4]/30 hover:shadow-xl hover:shadow-blue-900/8 flex gap-5 transition-all duration-300 hover:-translate-y-1"
+                className="group bg-white rounded-2xl p-7 border border-slate-100 hover:border-[#44DDF1]/30 hover:shadow-xl hover:shadow-blue-900/8 flex gap-5 transition-all duration-300 hover:-translate-y-1"
               >
                 {/* Icon */}
                 <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-105 transition-transform duration-300`}>
@@ -130,19 +130,19 @@ export default function ServicesPage() {
 
                 {/* Content */}
                 <div className="flex-1">
-                  <h2 className="font-bold text-[#0f1f3d] text-lg mb-2 group-hover:text-[#2e7fd4] transition-colors duration-200 leading-tight">
+                  <h2 className="font-bold text-[#0f1f3d] text-lg mb-2 group-hover:text-[#44DDF1] transition-colors duration-200 leading-tight">
                     {service.name}
                   </h2>
                   <p className="text-slate-500 text-sm leading-relaxed mb-4">{service.desc}</p>
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-3">
                     {service.tags.map((tag) => (
-                      <span key={tag} className="text-xs font-medium text-[#2e7fd4] bg-blue-50 px-2.5 py-1 rounded-full">
+                      <span key={tag} className="text-xs font-medium text-[#44DDF1] bg-blue-50 px-2.5 py-1 rounded-full">
                         {tag}
                       </span>
                     ))}
                   </div>
-                  <div className="flex items-center gap-1.5 text-[#2e7fd4] text-sm font-semibold">
+                  <div className="flex items-center gap-1.5 text-[#44DDF1] text-sm font-semibold">
                     Learn More <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform duration-200" />
                   </div>
                 </div>

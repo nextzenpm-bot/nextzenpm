@@ -46,8 +46,8 @@ export default function AboutPage() {
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <div className="inline-flex items-center gap-2 text-[#2e7fd4] text-xs font-bold uppercase tracking-widest mb-4">
-                <span className="w-6 h-px bg-[#2e7fd4]" />
+              <div className="inline-flex items-center gap-2 text-[#44DDF1] text-xs font-bold uppercase tracking-widest mb-4">
+                <span className="w-6 h-px bg-[#44DDF1]" />
                 Who We Are
               </div>
               <h2 className="text-4xl font-bold text-[#0f1f3d] mb-5 leading-tight">
@@ -66,7 +66,7 @@ export default function AboutPage() {
                 "Real-time reporting and photo documentation",
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 mb-2.5">
-                  <CheckCircle size={16} className="text-[#2e7fd4] flex-shrink-0" />
+                  <CheckCircle size={16} className="text-[#44DDF1] flex-shrink-0" />
                   <span className="text-slate-700 text-sm font-medium">{item}</span>
                 </div>
               ))}
@@ -106,8 +106,8 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {values.map((v) => (
               <div key={v.title} className="bg-white rounded-2xl p-7 border border-slate-100 shadow-sm">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#2e7fd4]/10 to-[#1a4b8c]/10 flex items-center justify-center mb-5">
-                  <v.icon size={22} className="text-[#2e7fd4]" />
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#44DDF1]/10 to-[#1a4b8c]/10 flex items-center justify-center mb-5">
+                  <v.icon size={22} className="text-[#44DDF1]" />
                 </div>
                 <h3 className="font-bold text-[#0f1f3d] text-xl mb-3">{v.title}</h3>
                 <p className="text-slate-500 text-sm leading-relaxed">{v.desc}</p>
@@ -121,8 +121,8 @@ export default function AboutPage() {
       <section className="section-padding bg-white">
         <div className="container-wide">
           <div className="text-center mb-14">
-            <div className="inline-flex items-center gap-2 text-[#2e7fd4] text-xs font-bold uppercase tracking-widest mb-4">
-              <span className="w-6 h-px bg-[#2e7fd4]" />
+            <div className="inline-flex items-center gap-2 text-[#44DDF1] text-xs font-bold uppercase tracking-widest mb-4">
+              <span className="w-6 h-px bg-[#44DDF1]" />
               Our Leadership
             </div>
             <h2 className="text-4xl font-bold text-[#0f1f3d] mb-4">Meet the Team</h2>
@@ -130,11 +130,11 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {team.map((member) => (
               <div key={member.name} className="bg-[#f8fafc] rounded-2xl p-7 border border-slate-100 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#2e7fd4] to-[#0f1f3d] flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#44DDF1] to-[#0f1f3d] flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">
                   {member.initials}
                 </div>
                 <h3 className="font-bold text-[#0f1f3d] text-lg">{member.name}</h3>
-                <p className="text-[#2e7fd4] text-sm font-semibold mb-3">{member.role}</p>
+                <p className="text-[#44DDF1] text-sm font-semibold mb-3">{member.role}</p>
                 <p className="text-slate-500 text-sm leading-relaxed">{member.desc}</p>
               </div>
             ))}

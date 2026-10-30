@@ -24,7 +24,7 @@ export default function VendorCTA() {
     <section className="section-padding bg-[#0f1f3d] relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#2e7fd4]/10 rounded-full translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#44DDF1]/10 rounded-full translate-x-1/2 -translate-y-1/2" />
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#e8a935]/8 rounded-full -translate-x-1/2 translate-y-1/2" />
         <div
           className="absolute inset-0 opacity-[0.03]"
@@ -68,10 +68,10 @@ export default function VendorCTA() {
             {benefits.map((b, i) => (
               <div
                 key={i}
-                className="flex items-start gap-4 bg-white/5 border border-white/10 rounded-2xl p-5 hover:bg-white/8 hover:border-[#2e7fd4]/30 transition-all duration-300 group"
+                className="flex items-start gap-4 bg-white/5 border border-white/10 rounded-2xl p-5 hover:bg-white/8 hover:border-[#44DDF1]/30 transition-all duration-300 group"
               >
-                <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#2e7fd4]/20 to-[#1a4b8c]/20 flex items-center justify-center flex-shrink-0 group-hover:from-[#2e7fd4]/30 group-hover:to-[#1a4b8c]/30 transition-all duration-300">
-                  <b.icon size={20} className="text-[#2e7fd4]" />
+                <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#44DDF1]/20 to-[#1a4b8c]/20 flex items-center justify-center flex-shrink-0 group-hover:from-[#44DDF1]/30 group-hover:to-[#1a4b8c]/30 transition-all duration-300">
+                  <b.icon size={20} className="text-[#44DDF1]" />
                 </div>
                 <div>
                   <h3 className="font-bold text-white text-base mb-1">{b.title}</h3>

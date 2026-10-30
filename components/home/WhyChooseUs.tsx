@@ -30,8 +30,8 @@ export default function WhyChooseUs() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left: Content */}
           <div>
-            <div className="inline-flex items-center gap-2 text-[#2e7fd4] text-xs font-bold uppercase tracking-widest mb-4">
-              <span className="w-6 h-px bg-[#2e7fd4]" />
+            <div className="inline-flex items-center gap-2 text-[#44DDF1] text-xs font-bold uppercase tracking-widest mb-4">
+              <span className="w-6 h-px bg-[#44DDF1]" />
               Why Choose NextZen
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-[#0f1f3d] mb-5 leading-tight">
@@ -45,8 +45,8 @@ export default function WhyChooseUs() {
             <div className="flex flex-col gap-5">
               {reasons.map((reason) => (
                 <div key={reason.title} className="flex items-start gap-4 group">
-                  <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#2e7fd4]/10 to-[#1a4b8c]/10 flex items-center justify-center flex-shrink-0 group-hover:from-[#2e7fd4]/20 group-hover:to-[#1a4b8c]/20 transition-all duration-300">
-                    <reason.icon size={20} className="text-[#2e7fd4]" />
+                  <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#44DDF1]/10 to-[#1a4b8c]/10 flex items-center justify-center flex-shrink-0 group-hover:from-[#44DDF1]/20 group-hover:to-[#1a4b8c]/20 transition-all duration-300">
+                    <reason.icon size={20} className="text-[#44DDF1]" />
                   </div>
                   <div>
                     <h3 className="font-bold text-[#0f1f3d] text-base mb-1">{reason.title}</h3>
@@ -59,7 +59,7 @@ export default function WhyChooseUs() {
 
           {/* Right: Visual card */}
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-[#2e7fd4]/10 to-[#0f1f3d]/5 rounded-3xl transform rotate-3" />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#44DDF1]/10 to-[#0f1f3d]/5 rounded-3xl transform rotate-3" />
             <div className="relative bg-gradient-to-br from-[#0f1f3d] to-[#162847] rounded-3xl p-8 shadow-2xl">
               {/* Top label */}
               <div className="flex items-center justify-between mb-6">
@@ -82,8 +82,8 @@ export default function WhyChooseUs() {
                   key={i}
                   className="flex items-center gap-3 py-3 border-b border-white/8 last:border-0"
                 >
-                  <div className="w-5 h-5 rounded-full bg-[#2e7fd4]/20 border border-[#2e7fd4]/40 flex items-center justify-center flex-shrink-0">
-                    <CheckCircle size={11} className="text-[#2e7fd4]" />
+                  <div className="w-5 h-5 rounded-full bg-[#44DDF1]/20 border border-[#44DDF1]/40 flex items-center justify-center flex-shrink-0">
+                    <CheckCircle size={11} className="text-[#44DDF1]" />
                   </div>
                   <span className="text-sm text-blue-100/80 font-medium">{item}</span>
                 </div>

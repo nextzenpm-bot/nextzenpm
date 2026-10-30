@@ -102,10 +102,10 @@ export default function ServicesSection() {
       <div className="container-wide">
         {/* Header */}
         <div className="text-center mb-14">
-          <div className="inline-flex items-center gap-2 text-[#2e7fd4] text-xs font-bold uppercase tracking-widest mb-4">
-            <span className="w-6 h-px bg-[#2e7fd4]" />
+          <div className="inline-flex items-center gap-2 text-[#44DDF1] text-xs font-bold uppercase tracking-widest mb-4">
+            <span className="w-6 h-px bg-[#44DDF1]" />
             What We Offer
-            <span className="w-6 h-px bg-[#2e7fd4]" />
+            <span className="w-6 h-px bg-[#44DDF1]" />
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-[#0f1f3d] mb-4">
             Comprehensive Property Services
@@ -121,7 +121,7 @@ export default function ServicesSection() {
             <Link
               key={service.href}
               href={service.href}
-              className="service-card group bg-white rounded-2xl p-6 border border-slate-100 hover:border-[#2e7fd4]/30 hover:shadow-xl hover:shadow-blue-900/8 flex flex-col"
+              className="service-card group bg-white rounded-2xl p-6 border border-slate-100 hover:border-[#44DDF1]/30 hover:shadow-xl hover:shadow-blue-900/8 flex flex-col"
             >
               {/* Icon */}
               <div
@@ -131,13 +131,13 @@ export default function ServicesSection() {
               </div>
 
               {/* Content */}
-              <h3 className="font-bold text-[#0f1f3d] text-base mb-2 leading-tight group-hover:text-[#2e7fd4] transition-colors duration-200">
+              <h3 className="font-bold text-[#0f1f3d] text-base mb-2 leading-tight group-hover:text-[#44DDF1] transition-colors duration-200">
                 {service.name}
               </h3>
               <p className="text-slate-500 text-sm leading-relaxed flex-1">{service.desc}</p>
 
               {/* Link */}
-              <div className="mt-4 flex items-center gap-1.5 text-[#2e7fd4] text-sm font-semibold opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-300">
+              <div className="mt-4 flex items-center gap-1.5 text-[#44DDF1] text-sm font-semibold opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-300">
                 Learn More <ArrowRight size={13} />
               </div>
             </Link>
@@ -146,7 +146,7 @@ export default function ServicesSection() {
           {/* View all card */}
           <Link
             href="/services"
-            className="service-card col-span-1 sm:col-span-2 group bg-gradient-to-br from-[#0f1f3d] to-[#1a4b8c] rounded-2xl p-6 border border-[#2e7fd4]/20 flex flex-col items-start justify-between min-h-[160px]"
+            className="service-card col-span-1 sm:col-span-2 group bg-gradient-to-br from-[#0f1f3d] to-[#1a4b8c] rounded-2xl p-6 border border-[#44DDF1]/20 flex flex-col items-start justify-between min-h-[160px]"
           >
             <div>
               <p className="text-xs font-bold text-[#e8a935] uppercase tracking-widest mb-2">
@@ -159,7 +159,7 @@ export default function ServicesSection() {
                 Explore our complete range including Other Services and custom solutions.
               </p>
             </div>
-            <div className="flex items-center gap-2 text-white font-semibold text-sm mt-4 bg-white/10 rounded-lg px-4 py-2.5 group-hover:bg-[#2e7fd4] transition-colors duration-300">
+            <div className="flex items-center gap-2 text-white font-semibold text-sm mt-4 bg-white/10 rounded-lg px-4 py-2.5 group-hover:bg-[#44DDF1] transition-colors duration-300">
               See All Services <ArrowRight size={14} />
             </div>
           </Link>

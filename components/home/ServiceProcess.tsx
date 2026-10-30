@@ -79,7 +79,7 @@ export default function ServiceProcess() {
           {processSteps.map((item, idx) => (
             <div
               key={idx}
-              className="bg-slate-50 hover:bg-white rounded-2xl border border-slate-200 hover:border-[#2e7fd4]/50 p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group relative"
+              className="bg-slate-50 hover:bg-white rounded-2xl border border-slate-200 hover:border-[#44DDF1]/50 p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group relative"
             >
               <div>
                 {/* Step number badge & icon */}
@@ -87,7 +87,7 @@ export default function ServiceProcess() {
                   <div className="w-12 h-12 rounded-xl bg-[#0f1f3d] text-white flex items-center justify-center font-extrabold text-base shadow-sm group-hover:bg-[#1a4b8c] transition-colors">
                     <item.icon size={22} className="text-[#e8a935]" />
                   </div>
-                  <span className="text-3xl font-black text-slate-200 group-hover:text-[#2e7fd4]/30 transition-colors">
+                  <span className="text-3xl font-black text-slate-200 group-hover:text-[#44DDF1]/30 transition-colors">
                     {item.step}
                   </span>
                 </div>
@@ -109,7 +109,7 @@ export default function ServiceProcess() {
               <div className="pt-4 border-t border-slate-200/80 space-y-2">
                 {item.features.map((feat, fIdx) => (
                   <div key={fIdx} className="flex items-center gap-2">
-                    <ShieldCheck size={14} className="text-[#2e7fd4] flex-shrink-0" />
+                    <ShieldCheck size={14} className="text-[#44DDF1] flex-shrink-0" />
                     <span className="text-xs text-slate-600 font-medium line-clamp-1">
                       {feat}
                     </span>

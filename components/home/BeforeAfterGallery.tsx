@@ -200,7 +200,7 @@ export default function BeforeAfterGallery() {
                         {proj.location}
                       </span>
                       <span className="flex items-center gap-1.5">
-                        <Clock size={13} className="text-[#2e7fd4]" />
+                        <Clock size={13} className="text-[#44DDF1]" />
                         Turnaround: {proj.turnaround}
                       </span>
                     </div>

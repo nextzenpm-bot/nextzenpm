@@ -78,8 +78,8 @@ export default function VendorPartnershipsPage() {
       <section className="section-padding bg-white">
         <div className="container-wide">
           <div className="text-center mb-14">
-            <div className="inline-flex items-center gap-2 text-[#2e7fd4] text-xs font-bold uppercase tracking-widest mb-4">
-              <span className="w-6 h-px bg-[#2e7fd4]" />
+            <div className="inline-flex items-center gap-2 text-[#44DDF1] text-xs font-bold uppercase tracking-widest mb-4">
+              <span className="w-6 h-px bg-[#44DDF1]" />
               Who We Serve
             </div>
             <h2 className="text-4xl font-bold text-[#0f1f3d] mb-4">
@@ -92,15 +92,15 @@ export default function VendorPartnershipsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-7">
             {forWhom.map((item) => (
               <div key={item.title} className="bg-[#f8fafc] rounded-2xl p-7 border border-slate-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#2e7fd4]/10 to-[#1a4b8c]/10 flex items-center justify-center mb-5">
-                  <item.icon size={22} className="text-[#2e7fd4]" />
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#44DDF1]/10 to-[#1a4b8c]/10 flex items-center justify-center mb-5">
+                  <item.icon size={22} className="text-[#44DDF1]" />
                 </div>
                 <h3 className="font-bold text-[#0f1f3d] text-xl mb-3">{item.title}</h3>
                 <p className="text-slate-500 text-sm leading-relaxed mb-5">{item.desc}</p>
                 <ul className="flex flex-col gap-2">
                   {item.benefits.map((b) => (
                     <li key={b} className="flex items-center gap-2">
-                      <CheckCircle size={14} className="text-[#2e7fd4] flex-shrink-0" />
+                      <CheckCircle size={14} className="text-[#44DDF1] flex-shrink-0" />
                       <span className="text-slate-700 text-sm">{b}</span>
                     </li>
                   ))}
@@ -129,9 +129,9 @@ export default function VendorPartnershipsPage() {
               { icon: TrendingUp, title: "Full Documentation", desc: "Photo-documented work orders and reports delivered promptly for every completed job." },
               { icon: Users, title: "Dedicated Support", desc: "A dedicated point of contact who understands your portfolio and your standards." },
             ].map((b) => (
-              <div key={b.title} className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/8 hover:border-[#2e7fd4]/30 transition-all duration-300">
-                <div className="w-10 h-10 rounded-xl bg-[#2e7fd4]/15 flex items-center justify-center mb-4">
-                  <b.icon size={18} className="text-[#2e7fd4]" />
+              <div key={b.title} className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/8 hover:border-[#44DDF1]/30 transition-all duration-300">
+                <div className="w-10 h-10 rounded-xl bg-[#44DDF1]/15 flex items-center justify-center mb-4">
+                  <b.icon size={18} className="text-[#44DDF1]" />
                 </div>
                 <h3 className="font-bold text-white mb-2">{b.title}</h3>
                 <p className="text-blue-200/60 text-sm leading-relaxed">{b.desc}</p>
@@ -142,7 +142,7 @@ export default function VendorPartnershipsPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-gradient-to-r from-[#1a4b8c] to-[#2e7fd4]">
+      <section className="py-20 bg-gradient-to-r from-[#1a4b8c] to-[#44DDF1]">
         <div className="container-wide text-center">
           <h2 className="text-4xl font-bold text-white mb-4">Ready to Start a Partnership?</h2>
           <p className="text-blue-100/80 text-lg mb-8 max-w-xl mx-auto">

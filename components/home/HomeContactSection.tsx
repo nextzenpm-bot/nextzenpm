@@ -71,7 +71,7 @@ export default function HomeContactSection() {
               <div className="space-y-4 mb-8">
                 <a
                   href="tel:+12393104998"
-                  className="flex items-start gap-4 p-4 rounded-xl bg-white border border-slate-200 hover:border-[#2e7fd4] transition-all group shadow-sm"
+                  className="flex items-start gap-4 p-4 rounded-xl bg-white border border-slate-200 hover:border-[#44DDF1] transition-all group shadow-sm"
                 >
                   <div className="w-10 h-10 rounded-lg bg-blue-50 text-[#1a4b8c] group-hover:bg-[#1a4b8c] group-hover:text-white flex items-center justify-center flex-shrink-0 transition-colors">
                     <Phone size={18} />
@@ -89,7 +89,7 @@ export default function HomeContactSection() {
 
                 <a
                   href="mailto:info@nextzenpm.com"
-                  className="flex items-start gap-4 p-4 rounded-xl bg-white border border-slate-200 hover:border-[#2e7fd4] transition-all group shadow-sm"
+                  className="flex items-start gap-4 p-4 rounded-xl bg-white border border-slate-200 hover:border-[#44DDF1] transition-all group shadow-sm"
                 >
                   <div className="w-10 h-10 rounded-lg bg-blue-50 text-[#1a4b8c] group-hover:bg-[#1a4b8c] group-hover:text-white flex items-center justify-center flex-shrink-0 transition-colors">
                     <Mail size={18} />
@@ -202,7 +202,7 @@ export default function HomeContactSection() {
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder="John Doe"
-                        className="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2.5 text-sm text-slate-900 focus:bg-white focus:outline-none focus:border-[#2e7fd4]"
+                        className="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2.5 text-sm text-slate-900 focus:bg-white focus:outline-none focus:border-[#44DDF1]"
                       />
                     </div>
                     <div>
@@ -214,7 +214,7 @@ export default function HomeContactSection() {
                         value={formData.company}
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                         placeholder="e.g. Apex Property Management"
-                        className="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2.5 text-sm text-slate-900 focus:bg-white focus:outline-none focus:border-[#2e7fd4]"
+                        className="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2.5 text-sm text-slate-900 focus:bg-white focus:outline-none focus:border-[#44DDF1]"
                       />
                     </div>
                   </div>
@@ -230,7 +230,7 @@ export default function HomeContactSection() {
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder="jdoe@company.com"
-                        className="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2.5 text-sm text-slate-900 focus:bg-white focus:outline-none focus:border-[#2e7fd4]"
+                        className="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2.5 text-sm text-slate-900 focus:bg-white focus:outline-none focus:border-[#44DDF1]"
                       />
                     </div>
                     <div>
@@ -243,7 +243,7 @@ export default function HomeContactSection() {
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         placeholder="(555) 123-4567"
-                        className="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2.5 text-sm text-slate-900 focus:bg-white focus:outline-none focus:border-[#2e7fd4]"
+                        className="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2.5 text-sm text-slate-900 focus:bg-white focus:outline-none focus:border-[#44DDF1]"
                       />
                     </div>
                   </div>
@@ -256,7 +256,7 @@ export default function HomeContactSection() {
                       <select
                         value={formData.service}
                         onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                        className="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2.5 text-sm text-slate-900 focus:bg-white focus:outline-none focus:border-[#2e7fd4]"
+                        className="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2.5 text-sm text-slate-900 focus:bg-white focus:outline-none focus:border-[#44DDF1]"
                       >
                         {serviceOptions.map((opt) => (
                           <option key={opt} value={opt}>
@@ -274,7 +274,7 @@ export default function HomeContactSection() {
                         value={formData.propertyAddress}
                         onChange={(e) => setFormData({ ...formData, propertyAddress: e.target.value })}
                         placeholder="e.g. 124 Main St, Atlanta GA"
-                        className="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2.5 text-sm text-slate-900 focus:bg-white focus:outline-none focus:border-[#2e7fd4]"
+                        className="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2.5 text-sm text-slate-900 focus:bg-white focus:outline-none focus:border-[#44DDF1]"
                       />
                     </div>
                   </div>
@@ -288,7 +288,7 @@ export default function HomeContactSection() {
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="Describe work scope, urgency level, or number of units in portfolio..."
-                      className="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2.5 text-sm text-slate-900 focus:bg-white focus:outline-none focus:border-[#2e7fd4]"
+                      className="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2.5 text-sm text-slate-900 focus:bg-white focus:outline-none focus:border-[#44DDF1]"
                     />
                   </div>
 

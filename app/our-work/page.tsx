@@ -129,7 +129,7 @@ export default function OurWorkPage() {
 
                 {/* Content */}
                 <div className="p-5">
-                  <p className="text-xs font-bold text-[#2e7fd4] uppercase tracking-widest mb-2">{project.service}</p>
+                  <p className="text-xs font-bold text-[#44DDF1] uppercase tracking-widest mb-2">{project.service}</p>
                   <p className="text-slate-600 text-sm leading-relaxed">{project.desc}</p>
                 </div>
               </div>

@@ -56,7 +56,7 @@ export default function TrustIndicators() {
               key={partner.name}
               className="bg-slate-800/50 hover:bg-slate-800 border border-slate-700/60 hover:border-slate-600 rounded-xl p-4 flex flex-col items-center justify-center text-center transition-all duration-200 group"
             >
-              <div className="w-10 h-10 rounded-lg bg-blue-950/80 border border-blue-500/20 flex items-center justify-center text-[#2e7fd4] font-black text-sm tracking-tighter mb-2 group-hover:text-[#e8a935] transition-colors">
+              <div className="w-10 h-10 rounded-lg bg-blue-950/80 border border-blue-500/20 flex items-center justify-center text-[#44DDF1] font-black text-sm tracking-tighter mb-2 group-hover:text-[#e8a935] transition-colors">
                 {partner.name.split(" ").map((w) => w[0]).slice(0, 2).join("")}
               </div>
               <span className="font-semibold text-xs text-slate-200 line-clamp-1 group-hover:text-white transition-colors">
@@ -76,7 +76,7 @@ export default function TrustIndicators() {
               key={badge.title}
               className="flex items-start gap-3.5 bg-slate-800/30 rounded-lg p-3.5 border border-slate-700/40"
             >
-              <div className="w-9 h-9 rounded-lg bg-[#2e7fd4]/10 border border-[#2e7fd4]/20 flex items-center justify-center flex-shrink-0 text-[#2e7fd4] mt-0.5">
+              <div className="w-9 h-9 rounded-lg bg-[#44DDF1]/10 border border-[#44DDF1]/20 flex items-center justify-center flex-shrink-0 text-[#44DDF1] mt-0.5">
                 <badge.icon size={18} />
               </div>
               <div>
