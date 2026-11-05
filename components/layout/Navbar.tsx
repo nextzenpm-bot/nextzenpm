@@ -86,21 +86,27 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <nav className="container-wide flex items-center justify-between h-20">
+      <nav
+        className={`container-wide flex items-center justify-between transition-all duration-300 ${
+          isScrolled ? "h-20" : "h-20 md:h-24"
+        }`}
+      >
         {/* Official Brand Logo */}
-        <Link href="/" className="flex items-center group py-1">
+        <Link href="/" className="flex items-center group py-1 flex-shrink-0">
           <Image
             src="/images/logo.png"
             alt="NextZen Property Maintenance LLC"
-            width={240}
-            height={75}
+            width={266}
+            height={194}
             priority
-            className="h-12 sm:h-14 md:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105 drop-shadow-md"
+            className={`w-auto object-contain transition-all duration-300 group-hover:scale-105 drop-shadow-md ${
+              isScrolled ? "h-13 sm:h-14 md:h-16" : "h-14 sm:h-16 md:h-20"
+            }`}
           />
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden lg:flex items-center gap-1">
+        <div className="hidden lg:flex items-center gap-1 xl:gap-1.5">
           {navLinks.map((link) =>
             link.hasDropdown ? (
               <div
@@ -111,7 +117,7 @@ export default function Navbar() {
                 onMouseLeave={handleDropdownLeave}
               >
                 <button
-                  className={`flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${
+                  className={`flex items-center gap-1 px-3.5 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${
                     isActive(link.href)
                       ? isScrolled
                         ? "text-[#0891b2] bg-cyan-50"
@@ -172,7 +178,7 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${
+                className={`px-3.5 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${
                   isActive(link.href)
                     ? isScrolled
                       ? "text-[#0891b2] bg-cyan-50"
@@ -188,8 +194,32 @@ export default function Navbar() {
           )}
         </div>
 
-        {/* CTA matching reference */}
-        <div className="hidden lg:flex items-center gap-4">
+        {/* Right Area: Phone Number & CTA */}
+        <div className="hidden lg:flex items-center gap-3 xl:gap-5 flex-shrink-0">
+          {/* Phone Number */}
+          <a
+            href="tel:+12393104998"
+            className={`flex items-center gap-2 text-sm font-bold tracking-tight transition-all duration-200 group px-3.5 py-2 rounded-full border ${
+              isScrolled
+                ? "text-[#0f1f3d] bg-slate-50/90 border-slate-200/80 hover:bg-slate-100 hover:text-[#0891b2] hover:border-[#0891b2]/40"
+                : "text-white bg-black/25 border-white/20 backdrop-blur-md hover:bg-black/40 hover:text-[#44DDF1] hover:border-[#44DDF1]/50 shadow-md"
+            }`}
+          >
+            <div
+              className={`w-7 h-7 rounded-full flex items-center justify-center transition-colors duration-200 ${
+                isScrolled
+                  ? "bg-[#0891b2]/10 text-[#0891b2] group-hover:bg-[#0891b2] group-hover:text-white"
+                  : "bg-[#44DDF1]/20 text-[#44DDF1] group-hover:bg-[#44DDF1] group-hover:text-[#0f1f3d]"
+              }`}
+            >
+              <Phone size={13} className="fill-current" />
+            </div>
+            <span className={isScrolled ? "text-[#0f1f3d]" : "drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]"}>
+              (239) 310-4998
+            </span>
+          </a>
+
+          {/* CTA Button */}
           <Link
             href="/contact"
             className={`text-sm font-bold py-2.5 px-6 rounded-full inline-flex items-center gap-2 shadow-lg transition-all duration-200 hover:scale-105 active:scale-95 ${
@@ -203,16 +233,27 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Mobile menu toggle */}
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className={`lg:hidden p-2 rounded-lg transition-colors duration-200 ${
-            isScrolled ? "text-[#0f1f3d] hover:bg-slate-100" : "text-white hover:bg-white/10"
-          }`}
-          aria-label="Toggle menu"
-        >
-          {mobileOpen ? <X size={22} /> : <Menu size={22} />}
-        </button>
+        {/* Mobile controls */}
+        <div className="flex items-center gap-2 lg:hidden">
+          <a
+            href="tel:+12393104998"
+            className={`p-2 rounded-lg transition-colors ${
+              isScrolled ? "text-[#0891b2] hover:bg-slate-100" : "text-[#44DDF1] hover:bg-white/10"
+            }`}
+            aria-label="Call NextZen Property Maintenance"
+          >
+            <Phone size={19} />
+          </a>
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className={`p-2 rounded-lg transition-colors duration-200 ${
+              isScrolled ? "text-[#0f1f3d] hover:bg-slate-100" : "text-white hover:bg-white/10"
+            }`}
+            aria-label="Toggle menu"
+          >
+            {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile Menu */}
