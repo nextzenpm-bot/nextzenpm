@@ -31,7 +31,7 @@ export default function ContactPageClient() {
   return (
     <>
       {/* Hero Banner with Property Image */}
-      <section className="relative pt-36 pb-20 overflow-hidden border-b border-slate-800/40">
+      <section className="relative pt-36 pb-20 overflow-hidden border-b border-slate-800/20">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/banner-contact.jpg"
@@ -41,20 +41,29 @@ export default function ContactPageClient() {
             priority
             className="object-cover object-center"
           />
-          {/* Brand dark overlay ensuring maximum text readability & maintaining exact UI/UX */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#091528]/92 via-[#0f2244]/82 to-[#091528]/95" />
+          {/* Light overlay allowing the warm, bright clubhouse and entrance to shine */}
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/45 via-slate-950/25 to-slate-950/50" />
         </div>
 
         <div className="container-wide text-center relative z-10">
-          <div className="inline-flex items-center gap-2 text-[#e8a935] text-xs font-bold uppercase tracking-widest mb-4">
+          <div
+            className="inline-flex items-center gap-2 text-[#e8a935] text-xs font-bold uppercase tracking-widest mb-4"
+            style={{ textShadow: "0 2px 8px rgba(0,0,0,0.7), 0 1px 3px rgba(0,0,0,0.9)" }}
+          >
             <span className="w-6 h-px bg-[#e8a935]" />
             Get In Touch
             <span className="w-6 h-px bg-[#e8a935]" />
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-5 leading-tight drop-shadow-sm">
+          <h1
+            className="text-5xl md:text-6xl font-bold text-white mb-5 leading-tight"
+            style={{ textShadow: "0 3px 14px rgba(0,0,0,0.7), 0 1px 4px rgba(0,0,0,0.9)" }}
+          >
             Contact Us
           </h1>
-          <p className="text-blue-100/90 text-xl leading-relaxed max-w-xl mx-auto drop-shadow-sm">
+          <p
+            className="text-white text-xl leading-relaxed max-w-xl mx-auto font-medium"
+            style={{ textShadow: "0 2px 10px rgba(0,0,0,0.7), 0 1px 3px rgba(0,0,0,0.9)" }}
+          >
             Have a question or ready to discuss a service? We&apos;re here to help — reach out and we&apos;ll respond promptly.
           </p>
         </div>

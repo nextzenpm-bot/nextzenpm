@@ -24,7 +24,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero Banner with Property Image */}
-      <section className="relative pt-36 pb-20 overflow-hidden border-b border-slate-800/40">
+      <section className="relative pt-36 pb-20 overflow-hidden border-b border-slate-800/20">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/banner-about.jpg"
@@ -34,21 +34,30 @@ export default function AboutPage() {
             priority
             className="object-cover object-center"
           />
-          {/* Brand gradient overlay preserving exact UI/UX and text contrast */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#091528]/95 via-[#0f2244]/85 to-[#162e5c]/65" />
+          {/* Subtle light overlay allowing the bright architecture & landscaping to shine through */}
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/50 via-slate-950/30 to-black/10" />
         </div>
 
         <div className="container-wide relative z-10">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 text-[#e8a935] text-xs font-bold uppercase tracking-widest mb-4">
+            <div
+              className="inline-flex items-center gap-2 text-[#e8a935] text-xs font-bold uppercase tracking-widest mb-4"
+              style={{ textShadow: "0 2px 8px rgba(0,0,0,0.7), 0 1px 3px rgba(0,0,0,0.9)" }}
+            >
               <span className="w-6 h-px bg-[#e8a935]" />
               About NextZen
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-sm">
+            <h1
+              className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight"
+              style={{ textShadow: "0 3px 14px rgba(0,0,0,0.7), 0 1px 4px rgba(0,0,0,0.9)" }}
+            >
               A Team Built on{" "}
               <span className="text-gradient-gold">Trust & Excellence</span>
             </h1>
-            <p className="text-blue-100/90 text-xl leading-relaxed max-w-2xl drop-shadow-sm">
+            <p
+              className="text-white text-xl leading-relaxed max-w-2xl font-medium"
+              style={{ textShadow: "0 2px 10px rgba(0,0,0,0.7), 0 1px 3px rgba(0,0,0,0.9)" }}
+            >
               Since 2014, NextZen Property Maintenance has been the reliable partner that property managers, asset managers, and vendor coordinators count on for professional results.
             </p>
           </div>
