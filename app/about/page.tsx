@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CheckCircle, Target, Eye, Users, Award, ArrowRight } from "lucide-react";
+import Image from "next/image";
+import { CheckCircle, Target, Eye, Award, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -22,19 +23,32 @@ const team = [
 export default function AboutPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="hero-gradient pt-36 pb-20">
-        <div className="container-wide">
+      {/* Hero Banner with Property Image */}
+      <section className="relative pt-36 pb-20 overflow-hidden border-b border-slate-800/40">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/banner-about.jpg"
+            alt="NextZen Property Maintenance"
+            fill
+            sizes="100vw"
+            priority
+            className="object-cover object-center"
+          />
+          {/* Brand gradient overlay preserving exact UI/UX and text contrast */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#091528]/95 via-[#0f2244]/85 to-[#162e5c]/65" />
+        </div>
+
+        <div className="container-wide relative z-10">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 text-[#e8a935] text-xs font-bold uppercase tracking-widest mb-4">
               <span className="w-6 h-px bg-[#e8a935]" />
               About NextZen
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-sm">
               A Team Built on{" "}
               <span className="text-gradient-gold">Trust & Excellence</span>
             </h1>
-            <p className="text-blue-100/80 text-xl leading-relaxed max-w-2xl">
+            <p className="text-blue-100/90 text-xl leading-relaxed max-w-2xl drop-shadow-sm">
               Since 2014, NextZen Property Maintenance has been the reliable partner that property managers, asset managers, and vendor coordinators count on for professional results.
             </p>
           </div>

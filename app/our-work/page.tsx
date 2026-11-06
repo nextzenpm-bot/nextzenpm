@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Building2, Leaf, Sparkles, Wrench, Camera } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -75,18 +76,31 @@ const projects = [
 export default function OurWorkPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="hero-gradient pt-36 pb-20">
-        <div className="container-wide text-center">
+      {/* Hero Banner with Property Image */}
+      <section className="relative pt-36 pb-20 overflow-hidden border-b border-slate-800/40">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/banner-our-work.jpg"
+            alt="NextZen Property Preservation and Maintenance Projects"
+            fill
+            sizes="100vw"
+            priority
+            className="object-cover object-center"
+          />
+          {/* Brand dark overlay ensuring maximum text readability & maintaining exact UI/UX */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#091528]/92 via-[#0f2244]/82 to-[#091528]/95" />
+        </div>
+
+        <div className="container-wide text-center relative z-10">
           <div className="inline-flex items-center gap-2 text-[#e8a935] text-xs font-bold uppercase tracking-widest mb-4">
             <span className="w-6 h-px bg-[#e8a935]" />
             Project Gallery
             <span className="w-6 h-px bg-[#e8a935]" />
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-5 leading-tight">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-5 leading-tight drop-shadow-sm">
             Our Work
           </h1>
-          <p className="text-blue-100/80 text-xl leading-relaxed max-w-2xl mx-auto">
+          <p className="text-blue-100/90 text-xl leading-relaxed max-w-2xl mx-auto drop-shadow-sm">
             Real projects. Real results. See the quality and professionalism we deliver across every service we provide.
           </p>
         </div>

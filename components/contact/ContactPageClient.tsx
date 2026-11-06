@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from "lucide-react";
 
 const inquiryTypes = [
@@ -29,18 +30,31 @@ export default function ContactPageClient() {
 
   return (
     <>
-      {/* Hero */}
-      <section className="hero-gradient pt-36 pb-20">
-        <div className="container-wide text-center">
+      {/* Hero Banner with Property Image */}
+      <section className="relative pt-36 pb-20 overflow-hidden border-b border-slate-800/40">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/banner-contact.jpg"
+            alt="NextZen Property Maintenance Contact & Operations Office"
+            fill
+            sizes="100vw"
+            priority
+            className="object-cover object-center"
+          />
+          {/* Brand dark overlay ensuring maximum text readability & maintaining exact UI/UX */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#091528]/92 via-[#0f2244]/82 to-[#091528]/95" />
+        </div>
+
+        <div className="container-wide text-center relative z-10">
           <div className="inline-flex items-center gap-2 text-[#e8a935] text-xs font-bold uppercase tracking-widest mb-4">
             <span className="w-6 h-px bg-[#e8a935]" />
             Get In Touch
             <span className="w-6 h-px bg-[#e8a935]" />
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-5 leading-tight">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-5 leading-tight drop-shadow-sm">
             Contact Us
           </h1>
-          <p className="text-blue-100/80 text-xl leading-relaxed max-w-xl mx-auto">
+          <p className="text-blue-100/90 text-xl leading-relaxed max-w-xl mx-auto drop-shadow-sm">
             Have a question or ready to discuss a service? We&apos;re here to help — reach out and we&apos;ll respond promptly.
           </p>
         </div>
