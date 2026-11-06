@@ -52,7 +52,7 @@ export default function AboutPage() {
               style={{ textShadow: "0 3px 14px rgba(0,0,0,0.7), 0 1px 4px rgba(0,0,0,0.9)" }}
             >
               A Team Built on{" "}
-              <span className="text-gradient-gold">Trust & Excellence</span>
+              <span className="text-[#44DDF1]">Trust & Excellence</span>
             </h1>
             <p
               className="text-white text-xl leading-relaxed max-w-2xl font-medium"
