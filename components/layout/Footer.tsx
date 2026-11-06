@@ -65,7 +65,7 @@ export default function Footer() {
       </div>
 
       {/* Main Footer */}
-      <div className="container-wide py-16">
+      <div className="container-wide pt-20 pb-16 md:pt-28 md:pb-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
           {/* Brand & Contact (4 cols) */}
           <div className="lg:col-span-4">
