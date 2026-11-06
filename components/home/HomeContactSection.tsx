@@ -30,13 +30,30 @@ export default function HomeContactSection() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
+
+    const form = e.currentTarget;
+    const bodyData = new FormData(form);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: bodyData,
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        setSubmitted(true);
+      } else {
+        form.submit();
+      }
+    } catch {
+      form.submit();
+    } finally {
       setLoading(false);
-      setSubmitted(true);
-    }, 600);
+    }
   };
 
   return (
@@ -181,7 +198,22 @@ export default function HomeContactSection() {
                   </button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-5">
+                <form
+                  action="https://api.web3forms.com/submit"
+                  method="POST"
+                  onSubmit={handleSubmit}
+                  className="space-y-5"
+                >
+                  <input type="hidden" name="access_key" value="4fa7e7c5-527b-4775-bf9f-294757fdb030" />
+                  <input type="hidden" name="from_name" value="NextZen PM Homepage Intake Desk" />
+                  <input
+                    type="hidden"
+                    name="subject"
+                    value={`New Work Order Inquiry: ${formData.service} - ${formData.name}`}
+                  />
+                  <input type="hidden" name="redirect" value="https://nextzenpm.vercel.app/?status=success#contact-section" />
+                  <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} />
+
                   <div className="border-b border-slate-100 pb-4 mb-2">
                     <h3 className="text-xl font-bold text-[#0f1f3d]">
                       Request Service or Information
@@ -198,6 +230,7 @@ export default function HomeContactSection() {
                       </label>
                       <input
                         type="text"
+                        name="name"
                         required
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -211,6 +244,7 @@ export default function HomeContactSection() {
                       </label>
                       <input
                         type="text"
+                        name="company"
                         value={formData.company}
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                         placeholder="e.g. Apex Property Management"
@@ -226,6 +260,7 @@ export default function HomeContactSection() {
                       </label>
                       <input
                         type="email"
+                        name="email"
                         required
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -239,6 +274,7 @@ export default function HomeContactSection() {
                       </label>
                       <input
                         type="tel"
+                        name="phone"
                         required
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -254,6 +290,7 @@ export default function HomeContactSection() {
                         Primary Service Required
                       </label>
                       <select
+                        name="service"
                         value={formData.service}
                         onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                         className="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2.5 text-sm text-slate-900 focus:bg-white focus:outline-none focus:border-[#44DDF1]"
@@ -271,6 +308,7 @@ export default function HomeContactSection() {
                       </label>
                       <input
                         type="text"
+                        name="property_address"
                         value={formData.propertyAddress}
                         onChange={(e) => setFormData({ ...formData, propertyAddress: e.target.value })}
                         placeholder="e.g. 124 Main St, Atlanta GA"
@@ -284,6 +322,7 @@ export default function HomeContactSection() {
                       Scope Details / Special Instructions
                     </label>
                     <textarea
+                      name="message"
                       rows={3}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}

@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle, Loader2, AlertCircle } from "lucide-react";
 
 const inquiryTypes = [
   "Service Inquiry",
@@ -14,6 +14,8 @@ const inquiryTypes = [
 
 export default function ContactPageClient() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -23,9 +25,42 @@ export default function ContactPageClient() {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get("status") === "success") {
+        setSubmitted(true);
+      }
+    }
+  }, []);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setErrorMessage("");
+
+    const form = e.currentTarget;
+    const bodyData = new FormData(form);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: bodyData,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitted(true);
+      } else {
+        setErrorMessage(data.message || "Failed to submit form. Please try again.");
+      }
+    } catch {
+      // In case client fetch encounters network issues, fallback to native submit
+      form.submit();
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -134,59 +169,121 @@ export default function ContactPageClient() {
               <div className="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm">
                 {submitted ? (
                   <div className="flex flex-col items-center justify-center py-16 text-center">
-                    <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-4">
-                      <CheckCircle size={28} className="text-green-600" />
+                    <div className="w-16 h-16 rounded-full bg-emerald-100 flex items-center justify-center mb-4 text-emerald-600">
+                      <CheckCircle size={32} />
                     </div>
                     <h3 className="text-2xl font-bold text-[#0f1f3d] mb-2">Message Sent!</h3>
-                    <p className="text-slate-500 max-w-sm">
-                      Thank you for reaching out. We&apos;ll review your inquiry and get back to you within 24 hours.
+                    <p className="text-slate-500 max-w-sm mb-6 leading-relaxed text-sm">
+                      Thank you for reaching out. Your message has been sent to our team and we&apos;ll review your inquiry and get back to you within 24 hours.
                     </p>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setSubmitted(false);
+                        setFormData({
+                          name: "",
+                          email: "",
+                          phone: "",
+                          company: "",
+                          inquiryType: "",
+                          message: "",
+                        });
+                      }}
+                      className="btn-secondary text-xs py-2 px-5"
+                    >
+                      Send Another Message
+                    </button>
                   </div>
                 ) : (
                   <>
                     <h2 className="text-2xl font-bold text-[#0f1f3d] mb-2">Send Us a Message</h2>
                     <p className="text-slate-500 text-sm mb-7">Fill out the form below and we&apos;ll get back to you promptly.</p>
 
-                    <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+                    <form
+                      action="https://api.web3forms.com/submit"
+                      method="POST"
+                      onSubmit={handleSubmit}
+                      className="flex flex-col gap-5"
+                    >
+                      {/* Web3Forms Configuration */}
+                      <input type="hidden" name="access_key" value="4fa7e7c5-527b-4775-bf9f-294757fdb030" />
+                      <input type="hidden" name="from_name" value="NextZen Property Maintenance Website" />
+                      <input
+                        type="hidden"
+                        name="subject"
+                        value={`New NextZen Inquiry: ${formData.inquiryType || "General"} from ${formData.name || "Website Visitor"}`}
+                      />
+                      <input type="hidden" name="redirect" value="https://nextzenpm.vercel.app/contact?status=success" />
+                      <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} />
+
+                      {errorMessage && (
+                        <div className="flex items-center gap-2 p-3.5 bg-red-50 border border-red-200 rounded-xl text-red-600 text-xs font-medium">
+                          <AlertCircle size={16} className="flex-shrink-0" />
+                          <span>{errorMessage}</span>
+                        </div>
+                      )}
+
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                         <div>
                           <label className="block text-xs font-semibold text-[#0f1f3d] uppercase tracking-wide mb-1.5">Full Name *</label>
-                          <input type="text" required value={formData.name}
+                          <input
+                            type="text"
+                            name="name"
+                            required
+                            value={formData.name}
                             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                             className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-[#0f1f3d] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#44DDF1]/30 focus:border-[#44DDF1] transition-all"
-                            placeholder="John Smith" />
+                            placeholder="John Smith"
+                          />
                         </div>
                         <div>
                           <label className="block text-xs font-semibold text-[#0f1f3d] uppercase tracking-wide mb-1.5">Email Address *</label>
-                          <input type="email" required value={formData.email}
+                          <input
+                            type="email"
+                            name="email"
+                            required
+                            value={formData.email}
                             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                             className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-[#0f1f3d] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#44DDF1]/30 focus:border-[#44DDF1] transition-all"
-                            placeholder="john@company.com" />
+                            placeholder="john@company.com"
+                          />
                         </div>
                       </div>
 
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                         <div>
                           <label className="block text-xs font-semibold text-[#0f1f3d] uppercase tracking-wide mb-1.5">Phone Number</label>
-                          <input type="tel" value={formData.phone}
+                          <input
+                            type="tel"
+                            name="phone"
+                            value={formData.phone}
                             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                             className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-[#0f1f3d] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#44DDF1]/30 focus:border-[#44DDF1] transition-all"
-                            placeholder="(239) 310-4998" />
+                            placeholder="(239) 310-4998"
+                          />
                         </div>
                         <div>
                           <label className="block text-xs font-semibold text-[#0f1f3d] uppercase tracking-wide mb-1.5">Company Name</label>
-                          <input type="text" value={formData.company}
+                          <input
+                            type="text"
+                            name="company"
+                            value={formData.company}
                             onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                             className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-[#0f1f3d] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#44DDF1]/30 focus:border-[#44DDF1] transition-all"
-                            placeholder="Your Company" />
+                            placeholder="Your Company"
+                          />
                         </div>
                       </div>
 
                       <div>
                         <label className="block text-xs font-semibold text-[#0f1f3d] uppercase tracking-wide mb-1.5">Inquiry Type *</label>
-                        <select required value={formData.inquiryType}
+                        <select
+                          name="inquiry_type"
+                          required
+                          value={formData.inquiryType}
                           onChange={(e) => setFormData({ ...formData, inquiryType: e.target.value })}
-                          className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-[#0f1f3d] focus:outline-none focus:ring-2 focus:ring-[#44DDF1]/30 focus:border-[#44DDF1] transition-all bg-white">
+                          className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-[#0f1f3d] focus:outline-none focus:ring-2 focus:ring-[#44DDF1]/30 focus:border-[#44DDF1] transition-all bg-white"
+                        >
                           <option value="">Select inquiry type</option>
                           {inquiryTypes.map((t) => <option key={t} value={t}>{t}</option>)}
                         </select>
@@ -194,15 +291,33 @@ export default function ContactPageClient() {
 
                       <div>
                         <label className="block text-xs font-semibold text-[#0f1f3d] uppercase tracking-wide mb-1.5">Message *</label>
-                        <textarea required rows={5} value={formData.message}
+                        <textarea
+                          name="message"
+                          required
+                          rows={5}
+                          value={formData.message}
                           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                           className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-[#0f1f3d] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#44DDF1]/30 focus:border-[#44DDF1] transition-all resize-none"
-                          placeholder="Please describe your needs, property type, location, and any other relevant details..." />
+                          placeholder="Please describe your needs, property type, location, and any other relevant details..."
+                        />
                       </div>
 
-                      <button type="submit" className="btn-primary self-start">
-                        Send Message
-                        <Send size={15} />
+                      <button
+                        type="submit"
+                        disabled={loading}
+                        className="btn-primary self-start inline-flex items-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
+                      >
+                        {loading ? (
+                          <>
+                            <span>Sending...</span>
+                            <Loader2 size={15} className="animate-spin" />
+                          </>
+                        ) : (
+                          <>
+                            <span>Send Message</span>
+                            <Send size={15} />
+                          </>
+                        )}
                       </button>
                     </form>
                   </>
